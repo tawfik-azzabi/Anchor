@@ -17,162 +17,73 @@
     --purple: #5b2d8b;
     --teal: #1a6b6b;
     --rose: #8b1a4c;
+    --orange: #a05c10;
+    --navy: #0e2d5a;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
-    min-height: 100vh;
-    padding: 20px 15px 60px;
-    max-width: 640px;
-    margin: 0 auto;
-  }
-
-  header {
-    text-align: center;
-    margin-bottom: 22px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid #ccc9c0;
-  }
-
-  .eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
-
-  h1 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 6vw, 38px); line-height: 1.1; }
-  h1 em { color: var(--accent); font-style: italic; }
-  header p { margin-top: 8px; font-size: 13px; color: var(--muted); font-weight: 300; }
-
-  .tabs {
-    display: flex;
-    border: 1px solid #ccc9c0;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 22px;
-    background: var(--cream);
-  }
-
-  .tab-btn {
-    flex: 1;
-    padding: 11px 4px;
-    background: transparent;
-    border: none;
-    border-right: 1px solid #ccc9c0;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    color: var(--muted);
-    cursor: pointer;
-    transition: all 0.15s;
-    text-align: center;
-  }
-
-  .tab-btn:last-child { border-right: none; }
-  .tab-btn.active { background: var(--ink); color: var(--paper); font-weight: 500; }
-
-  /* ========== MEMO ========== */
-  .memo-section { display: none; }
-  .memo-section.active { display: block; }
-
-  .cat-header { display: flex; align-items: center; gap: 10px; margin: 20px 0 10px; }
-
-  .cat-pill {
-    display: inline-flex; align-items: center;
-    font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
-    font-weight: 600; padding: 4px 10px; border-radius: 20px;
-  }
-  .cat-pill.A { background: rgba(196,67,26,.12); color: var(--accent); }
-  .cat-pill.B { background: rgba(45,106,79,.12); color: var(--green); }
-  .cat-pill.C { background: rgba(26,76,139,.12); color: var(--blue); }
-  .cat-pill.D { background: rgba(91,45,139,.12); color: var(--purple); }
-  .cat-pill.E { background: rgba(26,107,107,.12); color: var(--teal); }
-  .cat-pill.F { background: rgba(139,26,76,.12); color: var(--rose); }
-
-  .cat-title { font-size: 13px; font-weight: 500; }
-
-  .fcard {
-    background: white; border: 1px solid #e0ddd6; border-radius: 10px;
-    padding: 14px 16px; margin-bottom: 8px; cursor: pointer; position: relative;
-    transition: border-color .15s, box-shadow .15s;
-  }
-  .fcard:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(196,67,26,.07); }
+  body { background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif; min-height:100vh; padding:20px 15px 60px; max-width:640px; margin:0 auto; }
+  header { text-align:center; margin-bottom:22px; padding-bottom:18px; border-bottom:1px solid #ccc9c0; }
+  .eyebrow { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
+  h1 { font-family:'Playfair Display',serif; font-size:clamp(24px,6vw,38px); line-height:1.1; }
+  h1 em { color:var(--accent); font-style:italic; }
+  header p { margin-top:8px; font-size:13px; color:var(--muted); font-weight:300; }
+  .tabs { display:flex; border:1px solid #ccc9c0; border-radius:8px; overflow:hidden; margin-bottom:22px; background:var(--cream); }
+  .tab-btn { flex:1; padding:11px 4px; background:transparent; border:none; border-right:1px solid #ccc9c0; font-family:'DM Sans',sans-serif; font-size:12px; color:var(--muted); cursor:pointer; transition:all .15s; text-align:center; }
+  .tab-btn:last-child { border-right:none; }
+  .tab-btn.active { background:var(--ink); color:var(--paper); font-weight:500; }
+  .memo-section { display:none; }
+  .memo-section.active { display:block; }
+  .cat-header { display:flex; align-items:center; gap:10px; margin:20px 0 10px; }
+  .cat-pill { display:inline-flex; align-items:center; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; font-weight:600; padding:4px 10px; border-radius:20px; }
+  .cat-pill.A { background:rgba(196,67,26,.12); color:var(--accent); }
+  .cat-pill.B { background:rgba(45,106,79,.12); color:var(--green); }
+  .cat-pill.C { background:rgba(26,76,139,.12); color:var(--blue); }
+  .cat-pill.D { background:rgba(91,45,139,.12); color:var(--purple); }
+  .cat-pill.E { background:rgba(26,107,107,.12); color:var(--teal); }
+  .cat-pill.F { background:rgba(139,26,76,.12); color:var(--rose); }
+  .cat-pill.G { background:rgba(160,92,16,.12); color:var(--orange); }
+  .cat-pill.H { background:rgba(14,45,90,.12); color:var(--navy); }
+  .cat-title { font-size:13px; font-weight:500; }
+  .fcard { background:white; border:1px solid #e0ddd6; border-radius:10px; padding:14px 16px; margin-bottom:8px; cursor:pointer; position:relative; transition:border-color .15s,box-shadow .15s; }
+  .fcard:hover { border-color:var(--accent); box-shadow:0 2px 10px rgba(196,67,26,.07); }
   .fcard .num { font-family:'Playfair Display',serif; font-size:18px; color:var(--accent); opacity:.22; position:absolute; top:12px; right:14px; }
-  .fcard p { font-size: 13.5px; line-height: 1.65; padding-right: 28px; }
+  .fcard p { font-size:13.5px; line-height:1.65; padding-right:28px; }
   .fcard .ftag { display:inline-block; margin-top:8px; font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); background:var(--cream); padding:2px 8px; border-radius:20px; }
-
+  .profil-label { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; font-weight:600; color:var(--muted); margin:14px 0 6px 2px; }
   .memo-hint { text-align:center; font-size:11px; color:var(--muted); margin-top:14px; }
-
-  /* ========== DRILL ========== */
-  .drill-section { display: none; }
-  .drill-section.active { display: block; }
-
-  .filter-row { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px; }
-
-  .filter-btn {
-    padding: 5px 11px; border-radius: 20px; border: 1.5px solid #d0cdc6;
-    background: transparent; font-family: 'DM Sans', sans-serif;
-    font-size: 11px; color: var(--muted); cursor: pointer;
-    transition: all .14s; font-weight: 500;
-  }
-  .filter-btn.on { border-color: var(--ink); background: var(--ink); color: var(--paper); }
-
-  .prog-wrap { background: var(--cream); border-radius: 20px; height: 4px; margin-bottom: 14px; overflow: hidden; }
-  .prog-fill { height: 100%; background: var(--accent); border-radius: 20px; transition: width .35s; }
-
+  .drill-section { display:none; }
+  .drill-section.active { display:block; }
+  .filter-row { display:flex; gap:5px; flex-wrap:wrap; margin-bottom:14px; }
+  .filter-btn { padding:5px 10px; border-radius:20px; border:1.5px solid #d0cdc6; background:transparent; font-family:'DM Sans',sans-serif; font-size:11px; color:var(--muted); cursor:pointer; transition:all .14s; font-weight:500; }
+  .filter-btn.on { border-color:var(--ink); background:var(--ink); color:var(--paper); }
+  .prog-wrap { background:var(--cream); border-radius:20px; height:4px; margin-bottom:14px; overflow:hidden; }
+  .prog-fill { height:100%; background:var(--accent); border-radius:20px; transition:width .35s; }
   .nav-info { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
-  .nav-info .ctr { font-size: 12px; color: var(--muted); }
-  .nav-info .ctag { font-size: 11px; color: var(--muted); }
-
-  .scenario-box {
-    background: var(--ink); color: var(--paper); border-radius: 12px;
-    padding: 20px; margin-bottom: 14px; position: relative; overflow: hidden;
-  }
-  .scenario-box::before {
-    content:''; position:absolute; top:-24px; right:-24px;
-    width:100px; height:100px; border-radius:50%; background:rgba(196,67,26,.1);
-  }
-
+  .nav-info .ctr { font-size:12px; color:var(--muted); }
+  .nav-info .ctag { font-size:11px; color:var(--muted); }
+  .scenario-box { background:var(--ink); color:var(--paper); border-radius:12px; padding:20px; margin-bottom:14px; position:relative; overflow:hidden; }
+  .scenario-box::before { content:''; position:absolute; top:-24px; right:-24px; width:100px; height:100px; border-radius:50%; background:rgba(196,67,26,.1); }
   .s-label { font-size:9px; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:6px; }
   .s-who { font-size:11px; color:#9a9488; margin-bottom:6px; }
   .s-text { font-size:14.5px; line-height:1.6; font-weight:300; }
-
-  .s-badge {
-    display:inline-block; margin-top:12px; font-size:10px; letter-spacing:1px;
-    text-transform:uppercase; padding:3px 10px; border-radius:20px; font-weight:600;
-  }
-  .bA { background:rgba(196,67,26,.2); color:#f4956a; }
-  .bB { background:rgba(45,106,79,.2); color:#7ecba1; }
-  .bC { background:rgba(26,76,139,.2); color:#7aabf0; }
-  .bD { background:rgba(91,45,139,.2); color:#b07af0; }
-  .bE { background:rgba(26,107,107,.2); color:#6ec9c9; }
-  .bF { background:rgba(139,26,76,.2); color:#f07aaa; }
-
-  textarea {
-    width:100%; min-height:100px; background:white; border:1.5px solid #ddd9d0;
-    border-radius:10px; padding:12px 14px; font-family:'DM Sans',sans-serif;
-    font-size:14px; color:var(--ink); resize:vertical; outline:none;
-    transition:border-color .15s; line-height:1.6;
-  }
-  textarea:focus { border-color: var(--accent); }
-  textarea::placeholder { color: #c0bdb6; }
-
+  .s-badge { display:inline-block; margin-top:12px; font-size:10px; letter-spacing:1px; text-transform:uppercase; padding:3px 10px; border-radius:20px; font-weight:600; }
+  .bA{background:rgba(196,67,26,.2);color:#f4956a;}
+  .bB{background:rgba(45,106,79,.2);color:#7ecba1;}
+  .bC{background:rgba(26,76,139,.2);color:#7aabf0;}
+  .bD{background:rgba(91,45,139,.2);color:#b07af0;}
+  .bE{background:rgba(26,107,107,.2);color:#6ec9c9;}
+  .bF{background:rgba(139,26,76,.2);color:#f07aaa;}
+  .bG{background:rgba(160,92,16,.2);color:#f0b870;}
+  .bH{background:rgba(14,45,90,.2);color:#7aaff0;}
+  textarea { width:100%; min-height:100px; background:white; border:1.5px solid #ddd9d0; border-radius:10px; padding:12px 14px; font-family:'DM Sans',sans-serif; font-size:14px; color:var(--ink); resize:vertical; outline:none; transition:border-color .15s; line-height:1.6; }
+  textarea:focus { border-color:var(--accent); }
+  textarea::placeholder { color:#c0bdb6; }
   .btn-row { display:flex; gap:8px; margin-top:12px; }
-
-  .btn-p {
-    flex:1; padding:12px; background:var(--accent); color:white; border:none;
-    border-radius:8px; font-family:'DM Sans',sans-serif; font-size:13.5px;
-    font-weight:500; cursor:pointer; transition:opacity .15s;
-  }
+  .btn-p { flex:1; padding:12px; background:var(--accent); color:white; border:none; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:13.5px; font-weight:500; cursor:pointer; transition:opacity .15s; }
   .btn-p:hover { opacity:.87; }
   .btn-p:disabled { opacity:.4; cursor:not-allowed; }
-
-  .btn-s {
-    padding:12px 16px; background:transparent; border:1.5px solid #ccc9c0;
-    border-radius:8px; font-family:'DM Sans',sans-serif; font-size:13.5px;
-    color:var(--muted); cursor:pointer; transition:all .15s;
-  }
+  .btn-s { padding:12px 16px; background:transparent; border:1.5px solid #ccc9c0; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:13.5px; color:var(--muted); cursor:pointer; transition:all .15s; }
   .btn-s:hover { border-color:var(--ink); color:var(--ink); }
-
   .feedback-box { display:none; margin-top:14px; }
   .feedback-box.show { display:block; }
   .feedback-inner { background:white; border:1px solid #e0ddd6; border-radius:12px; padding:18px; }
@@ -183,35 +94,44 @@
   .dot.on { background:var(--accent); }
   .f-text { font-size:13.5px; line-height:1.7; }
   .f-sug { margin-top:12px; background:var(--cream); border-left:3px solid var(--green); padding:10px 12px; border-radius:0 8px 8px 0; font-size:13px; font-style:italic; color:var(--green); line-height:1.6; }
-
   .loading-dots { display:inline-flex; gap:5px; padding:4px 0; }
   .loading-dots span { width:7px; height:7px; background:var(--accent); border-radius:50%; animation:bounce .9s infinite; }
   .loading-dots span:nth-child(2) { animation-delay:.15s; }
   .loading-dots span:nth-child(3) { animation-delay:.3s; }
-  @keyframes bounce { 0%,100%{ transform:translateY(0); opacity:.35; } 50%{ transform:translateY(-6px); opacity:1; } }
-
+  @keyframes bounce { 0%,100%{transform:translateY(0);opacity:.35;} 50%{transform:translateY(-6px);opacity:1;} }
   .no-sc { text-align:center; padding:30px 20px; color:var(--muted); font-size:14px; }
-
-  /* ========== RESULTS ========== */
   .results-section { display:none; }
   .results-section.active { display:flex; flex-direction:column; gap:12px; }
-
   .r-summary { background:var(--ink); color:var(--paper); border-radius:12px; padding:20px; text-align:center; }
   .r-summary h3 { font-family:'Playfair Display',serif; font-size:22px; margin-bottom:6px; }
   .r-summary p { font-size:13px; color:#9a9488; }
-
   .rcard { background:white; border:1px solid #e0ddd6; border-radius:10px; padding:16px; }
   .rcard .rw { font-size:11px; color:var(--muted); margin-bottom:4px; }
   .rcard .ra { font-size:13px; font-style:italic; margin-bottom:8px; line-height:1.5; }
   .rcard .rs { font-size:13px; color:var(--green); line-height:1.55; }
   .rcard .rsc { font-size:11px; color:var(--muted); margin-top:8px; }
-
-  .restart-btn {
-    width:100%; padding:13px; background:transparent; border:1.5px solid var(--accent);
-    border-radius:8px; color:var(--accent); font-family:'DM Sans',sans-serif;
-    font-size:13.5px; font-weight:500; cursor:pointer; transition:all .15s;
-  }
+  .restart-btn { width:100%; padding:13px; background:transparent; border:1.5px solid var(--accent); border-radius:8px; color:var(--accent); font-family:'DM Sans',sans-serif; font-size:13.5px; font-weight:500; cursor:pointer; transition:all .15s; }
   .restart-btn:hover { background:var(--accent); color:white; }
+  .acc-item { margin-bottom:8px; border:1px solid #e0ddd6; border-radius:12px; overflow:hidden; background:white; }
+  .acc-trigger { width:100%; display:flex; align-items:center; gap:10px; padding:13px 15px; background:transparent; border:none; cursor:pointer; text-align:left; transition:background .15s; }
+  .acc-trigger:hover { background:var(--cream); }
+  .acc-pill { flex-shrink:0; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; font-weight:600; padding:3px 9px; border-radius:20px; }
+  .acc-title { flex:1; font-size:13.5px; font-weight:500; color:var(--ink); }
+  .acc-count { font-size:11px; color:var(--muted); flex-shrink:0; }
+  .acc-chevron { flex-shrink:0; font-size:11px; color:var(--muted); transition:transform .2s; }
+  .acc-trigger.open .acc-chevron { transform:rotate(180deg); }
+  .acc-body { display:none; padding:0 12px 12px; }
+  .acc-body.open { display:block; }
+  .cpA{background:rgba(196,67,26,.12);color:var(--accent);}
+  .cpB{background:rgba(45,106,79,.12);color:var(--green);}
+  .cpC{background:rgba(26,76,139,.12);color:var(--blue);}
+  .cpD{background:rgba(91,45,139,.12);color:var(--purple);}
+  .cpE{background:rgba(26,107,107,.12);color:var(--teal);}
+  .cpF{background:rgba(139,26,76,.12);color:var(--rose);}
+  .cpG{background:rgba(160,92,16,.12);color:var(--orange);}
+  .cpH{background:rgba(14,45,90,.12);color:var(--navy);}
+  .sub-label { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; font-weight:600; color:var(--muted); padding:10px 4px 4px; margin-bottom:6px; border-top:1px solid #ede9df; }
+  .sub-label.first { border-top:none; padding-top:2px; }
 </style>
 </head>
 <body>
@@ -231,169 +151,211 @@
 <!-- =================== MEMO =================== -->
 <div id="tab-memo" class="memo-section active">
 
-  <div class="cat-header"><span class="cat-pill A">A</span><span class="cat-title">Expliquer ton rôle</span></div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">1</span>
-    <p>Mon rôle c'est de piloter la DSI dans son ensemble avec un regard transverse, d'assurer le lien entre les enjeux du COMEX et les priorités IT, de porter les arbitrages au bon niveau et de défendre les engagements de la DSI vis-à-vis de qui de droit — partenaires internes ou externes.</p>
-    <span class="ftag">Vision globale · Lien stratégique</span>
+  <!-- A -->
+  <div class="acc-item">
+    <button class="acc-trigger" onclick="tog(this)">
+      <span class="acc-pill cpA">A</span>
+      <span class="acc-title">Expliquer ton rôle</span>
+      <span class="acc-count">5 formulations</span>
+      <span class="acc-chevron">▼</span>
+    </button>
+    <div class="acc-body">
+      <div class="sub-label first">Formulations clés</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">1</span><p>Mon rôle c'est de piloter la DSI dans son ensemble avec un regard transverse, d'assurer le lien entre les enjeux du COMEX et les priorités IT, de porter les arbitrages au bon niveau et de défendre les engagements de la DSI vis-à-vis de qui de droit — partenaires internes ou externes.</p><span class="ftag">Vision globale · Lien stratégique</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">2</span><p>Mon rôle c'est de faire en sorte que la DSI soit à la hauteur des attentes — il y en a à tous les niveaux. On est complémentaires, à condition de travailler en transparence.</p><span class="ftag">Complémentarité · Transparence</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">3</span><p>Mon rôle est d'être le garant de la cohérence d'ensemble et le gardien du temple — pas un expert technique qui s'ajoute aux équipes SI.</p><span class="ftag">Posture · Cohérence</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">4</span><p>Ce que j'apporte, ce n'est pas de l'expertise technique supplémentaire — c'est un regard transverse, une capacité d'arbitrage, et l'engagement de défendre la DSI là où elle doit l'être.</p><span class="ftag">Valeur ajoutée · Non-technique</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">5</span><p>Les arbitrages, les sujets à enjeu fort, et ce qui touche à la relation avec le COMEX ou les métiers — c'est mon périmètre. Le reste, c'est le vôtre. Je ne suis pas là pour refaire votre travail.</p><span class="ftag">Périmètre · Clarté</span></div>
+    </div>
   </div>
 
-  <div class="fcard" onclick="copyCard(this)"><span class="num">2</span>
-    <p>Mon rôle c'est de faire en sorte que la DSI soit à la hauteur des attentes — il y en a à tous les niveaux. On est complémentaires, à condition de travailler en transparence.</p>
-    <span class="ftag">Complémentarité · Transparence</span>
+  <!-- B -->
+  <div class="acc-item">
+    <button class="acc-trigger" onclick="tog(this)">
+      <span class="acc-pill cpB">B</span>
+      <span class="acc-title">Faire patienter — tenir la posture</span>
+      <span class="acc-count">6 formulations</span>
+      <span class="acc-chevron">▼</span>
+    </button>
+    <div class="acc-body">
+      <div class="sub-label first">Face à une pression de décision immédiate</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">1</span><p>Je note, on en reparle quand j'aurai ma propre lecture.</p><span class="ftag">Neutre · Direct</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">2</span><p>Je préfère te donner une réponse fiable plutôt qu'une réponse rapide.</p><span class="ftag">Fiabilité > Vitesse</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">3</span><p>C'est trop tôt pour que je te réponde là-dessus. Donne-moi quelques jours.</p><span class="ftag">Franchise · Simplicité</span></div>
+      <div class="sub-label">Avec engagement de retour</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">4</span><p>C'est sur mon radar — je reviens vers vous sous 48h avec une position claire.</p><span class="ftag">Engagement · Délai précis</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">5</span><p>Je préfère vous répondre avec les bons éléments plutôt que d'improviser ici.</p><span class="ftag">Sérieux · Anti-improvisation</span></div>
+      <div class="sub-label">Sur les règles de fonctionnement</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">6</span><p>Je vous le dirai à tous en même temps, dans 30 jours.</p><span class="ftag">Règles de fonctionnement · Collectif</span></div>
+    </div>
   </div>
 
-  <div class="fcard" onclick="copyCard(this)"><span class="num">3</span>
-    <p>Mon rôle est d'être le garant de la cohérence d'ensemble et le gardien du temple — pas un expert technique qui s'ajoute aux équipes SI.</p>
-    <span class="ftag">Posture · Cohérence</span>
+  <!-- C -->
+  <div class="acc-item">
+    <button class="acc-trigger" onclick="tog(this)">
+      <span class="acc-pill cpC">C</span>
+      <span class="acc-title">Recadrer sans blesser</span>
+      <span class="acc-count">5 formulations</span>
+      <span class="acc-chevron">▼</span>
+    </button>
+    <div class="acc-body">
+      <div class="sub-label first">Dans le couloir ou hors contexte</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">1</span><p>Ce n'est pas le sujet de ce moment. On voit ça en entretien individuel.</p><span class="ftag">Couloir · Dévier</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">2</span><p>Je ne parle pas des personnes dans les couloirs. Viens me voir en privé si tu veux qu'on en parle sérieusement.</p><span class="ftag">Couloirs · Personnes</span></div>
+      <div class="sub-label">Vis-à-vis des métiers</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">3</span><p>Pour vos demandes courantes, votre interlocuteur principal c'est [N-1 référent]. Moi j'interviens sur les sujets d'arbitrage ou de cap.</p><span class="ftag">Métiers · Poser le canal</span></div>
+      <div class="sub-label">Vis-à-vis du consultant</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">4</span><p>Pour ce type de sujet, je veux être dans la boucle avant qu'une direction soit donnée.</p><span class="ftag">Consultant · Reprendre la main</span></div>
+      <div class="sub-label">En entretien — ne pas résoudre en séance</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">5</span><p>Je note. On verra ça dans un deuxième temps.</p><span class="ftag">Ne pas résoudre en séance</span></div>
+    </div>
   </div>
 
-  <div class="fcard" onclick="copyCard(this)"><span class="num">4</span>
-    <p>Ce que j'apporte, ce n'est pas de l'expertise technique supplémentaire — c'est un regard transverse, une capacité d'arbitrage, et l'engagement de défendre la DSI là où elle doit l'être.</p>
-    <span class="ftag">Valeur ajoutée · Non-technique</span>
+  <!-- D -->
+  <div class="acc-item">
+    <button class="acc-trigger" onclick="tog(this)">
+      <span class="acc-pill cpD">D</span>
+      <span class="acc-title">Tenir la posture sous pression</span>
+      <span class="acc-count">6 formulations</span>
+      <span class="acc-chevron">▼</span>
+    </button>
+    <div class="acc-body">
+      <div class="sub-label first">Proximité PDG utilisée comme levier</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">1</span><p>Je suis là en tant que DSI. C'est à ce titre que je parle — pas à un autre.</p><span class="ftag">Proximité PDG · Neutraliser</span></div>
+      <div class="sub-label">Légitimité questionnée</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">2</span><p>Je suis nommé par intérim avec une perspective de confirmation. Je m'implique pleinement dès aujourd'hui — l'intérim ne change pas mon niveau d'engagement.</p><span class="ftag">Légitimité · Intérim</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">3</span><p>Ce que j'apporte, ce n'est pas 20 ans de DSI — c'est 6 ans de regard transverse sur cette organisation. L'expérience technique, elle est dans cette salle.</p><span class="ftag">Âge · Retourner en atout</span></div>
+      <div class="sub-label">Test technique en séance</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">4</span><p>C'est ton domaine d'expertise — je veux d'abord comprendre ta lecture avant de former la mienne.</p><span class="ftag">Test technique · Ne pas se piéger</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">5</span><p>Tu as l'air de penser que ça va être complexe — dis-moi ce que tu vois.</p><span class="ftag">Test légitimité · Retourner en question</span></div>
+      <div class="sub-label">Inquiétude sur les équipes</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">6</span><p>Je n'ai pas d'agenda caché là-dessus. Je ne prends pas de décision sur les équipes avant d'avoir fait mon propre diagnostic. Rien ne changera sans qu'on en parle.</p><span class="ftag">Équipes · Rassurer</span></div>
+    </div>
   </div>
 
-  <div class="cat-header"><span class="cat-pill B">B</span><span class="cat-title">Faire patienter — tenir la posture</span></div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">1</span>
-    <p>Je note, on en reparle quand j'aurai ma propre lecture.</p>
-    <span class="ftag">Neutre · Direct</span>
+  <!-- E -->
+  <div class="acc-item">
+    <button class="acc-trigger" onclick="tog(this)">
+      <span class="acc-pill cpE">E</span>
+      <span class="acc-title">Annoncer un arbitrage ou un non</span>
+      <span class="acc-count">4 formulations</span>
+      <span class="acc-chevron">▼</span>
+    </button>
+    <div class="acc-body">
+      <div class="sub-label first">Vis-à-vis des métiers</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">1</span><p>Dans 30 jours, je reviens vers vous avec mes priorités. Certains de vos sujets y seront. D'autres devront attendre — je vous le dirai franchement.</p><span class="ftag">Métiers · Calibrer les attentes</span></div>
+      <div class="sub-label">Délégation vers un N-1</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">2</span><p>Je te confirme la responsabilité pleine sur ce périmètre. Sur ce sujet, je reste dans la boucle — pas parce que je n'ai pas confiance, mais parce que c'est un sujet à enjeu fort.</p><span class="ftag">N-1 · Délégation nuancée</span></div>
+      <div class="sub-label">Face à une demande de garantie</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">3</span><p>Ce que je peux garantir, c'est ma franchise. Le reste, je te dirai ce que je pense quand j'aurai les éléments.</p><span class="ftag">Garantie · Franchise</span></div>
+      <div class="sub-label">Face à la résistance au changement</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">4</span><p>Ce n'est pas toujours la méthode le problème — parfois c'est le contexte ou les conditions dans lesquelles elle est mise en œuvre.</p><span class="ftag">Résistance · Recadrer</span></div>
+    </div>
   </div>
 
-  <div class="fcard" onclick="copyCard(this)"><span class="num">2</span>
-    <p>Je préfère te donner une réponse fiable plutôt qu'une réponse rapide.</p>
-    <span class="ftag">Fiabilité > Vitesse</span>
+  <!-- F -->
+  <div class="acc-item">
+    <button class="acc-trigger" onclick="tog(this)">
+      <span class="acc-pill cpF">F</span>
+      <span class="acc-title">Gérer la pression relationnelle</span>
+      <span class="acc-count">4 formulations</span>
+      <span class="acc-chevron">▼</span>
+    </button>
+    <div class="acc-body">
+      <div class="sub-label first">Pression liée à l'ancienneté interne</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">1</span><p>Je connais les gens et le contexte — ça m'aide. Mais connaître et piloter, c'est différent. Je prends le temps qu'il faut pour bien faire.</p><span class="ftag">Ancienneté · Garder la distance</span></div>
+      <div class="sub-label">Avec le PDG</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">2</span><p>Je préfère te parler de sujets, pas de personnes — pas encore.</p><span class="ftag">PDG · Ne pas rapporter sur les N-1</span></div>
+      <div class="sub-label">Avec les N-1</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">3</span><p>Dis-moi tout. Je veux comprendre ce qui s'est passé. Et si c'est un sujet à traiter, on le traitera.</p><span class="ftag">N-1 · Sujet non traité</span></div>
+      <div class="sub-label">Avec le DRH</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">4</span><p>Je ne prends pas de décision RH dans mes premières semaines, sur la base d'une seule remontée. Faites-moi confiance pour faire mon propre diagnostic.</p><span class="ftag">DRH · Décision RH prématurée</span></div>
+    </div>
   </div>
 
-  <div class="fcard" onclick="copyCard(this)"><span class="num">3</span>
-    <p>C'est sur mon radar — je reviens vers vous sous 48h avec une position claire.</p>
-    <span class="ftag">Engagement · Délai précis</span>
+  <!-- G -->
+  <div class="acc-item">
+    <button class="acc-trigger" onclick="tog(this)">
+      <span class="acc-pill cpG">G</span>
+      <span class="acc-title">1er entretien N-1 · J2–J5, 90 min</span>
+      <span class="acc-count">18 formulations</span>
+      <span class="acc-chevron">▼</span>
+    </button>
+    <div class="acc-body">
+      <div class="sub-label first">Ouverture — tronc commun</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">1</span><p>Ce n'est pas un entretien d'évaluation. Ce que je cherche, c'est comprendre ta réalité : les vrais sujets, les vrais blocages, les vraies inquiétudes. Plus tu es direct, plus ça m'aide. Ce qu'on se dit ici reste entre nous.</p><span class="ftag">Ouverture · Créer la confiance</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">2</span><p>Si tu devais me signaler un sujet qui pourrait me créer un problème dans 60 jours — lequel ce serait ?</p><span class="ftag">Risques · Signaux faibles</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">3</span><p>Qu'est-ce qui se dit dans les couloirs mais pas en réunion ?</p><span class="ftag">Ce qui ne remonte pas</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">4</span><p>Si tu étais à ma place, qu'est-ce que tu ferais en premier ?</p><span class="ftag">Inverser la position</span></div>
+      <div class="sub-label">Relances — quand c'est trop lisse</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">5</span><p>Et si je demandais à ton équipe, elle dirait quoi ?</p><span class="ftag">Relance · Réponse trop lisse</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">6</span><p>J'ai l'impression que tu te limites — est-ce que c'est volontaire ?</p><span class="ftag">N-1 en retrait · Débloquer</span></div>
+      <div class="sub-label">Tenir la posture en séance</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">7</span><p>Je note. J'ai besoin de me faire ma propre opinion avant de réagir là-dessus.</p><span class="ftag">Sujet politique · Ne pas réagir</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">8</span><p>Je ne sais pas encore. C'est pour ça que je t'écoute. Je ne vais rien décider avant d'avoir fait le tour de la situation.</p><span class="ftag">Qu'est-ce que tu vas changer ?</span></div>
+      <div class="sub-label">Profil · Études & Dev</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">9</span><p>Tu es au cœur du delivery — c'est le périmètre le plus exposé de la DSI. Je veux comprendre ta réalité avant tout autre chose.</p><span class="ftag">Ouverture · Études & Dev</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">10</span><p>C'est ton domaine d'expertise — je veux d'abord comprendre ta lecture avant de former la mienne.</p><span class="ftag">Si test de maîtrise technique</span></div>
+      <div class="sub-label">Profil · Exploitation</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">11</span><p>Tu es en bout de chaîne — ça veut dire que tu absorbes tous les problèmes des autres. Je veux comprendre ce que ça représente vraiment.</p><span class="ftag">Ouverture · Exploitation</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">12</span><p>Est-ce que tu as les moyens de le signaler tôt, ou tu l'absorbes ?</p><span class="ftag">Dépendances amont · Signalement</span></div>
+      <div class="sub-label">Profil · Infrastructures</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">13</span><p>Tu as une lecture longue de cette DSI que personne d'autre n'a. Je veux en profiter — pas juste du portefeuille, de ta vraie lecture de la situation.</p><span class="ftag">Ouverture · Infra</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">14</span><p>Ta lecture longue m'intéresse vraiment — qu'est-ce que tu ne me dis pas encore ?</p><span class="ftag">Si posture d'attente polie</span></div>
+      <div class="sub-label">Profil · Architecture</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">15</span><p>Tu arrives dans un périmètre qui reste à définir. Je veux comprendre comment tu le vois, toi — pas ce qui est écrit dans un org chart.</p><span class="ftag">Ouverture · Architecture</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">16</span><p>Tu n'as pas à tout avoir défini maintenant. Je veux juste ta première lecture.</p><span class="ftag">Si périmètre flou · Rassurer</span></div>
+      <div class="sub-label">Profil · Pilotage</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">17</span><p>Tu as une vision transverse que personne d'autre n'a dans cette équipe. Je veux comprendre comment tu lis la situation globale — avant d'avoir les vues partielles des autres.</p><span class="ftag">Ouverture · Pilotage</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">18</span><p>Est-ce que la feuille de route actuelle est réaliste — ou est-ce qu'on s'est engagés sur trop de choses ?</p><span class="ftag">Pilotage · Réalisme portefeuille</span></div>
+    </div>
   </div>
 
-  <div class="fcard" onclick="copyCard(this)"><span class="num">4</span>
-    <p>C'est trop tôt pour que je te réponde là-dessus. Donne-moi quelques jours.</p>
-    <span class="ftag">Franchise · Simplicité</span>
+  <!-- H -->
+  <div class="acc-item">
+    <button class="acc-trigger" onclick="tog(this)">
+      <span class="acc-pill cpH">H</span>
+      <span class="acc-title">2ème entretien N-1 · J18–J25, 45 min</span>
+      <span class="acc-count">20 formulations</span>
+      <span class="acc-chevron">▼</span>
+    </button>
+    <div class="acc-body">
+      <div class="sub-label first">Ouverture — sur base des livrables</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">1</span><p>J'ai lu ce que tu m'as envoyé. Je veux te restituer ma lecture et qu'on vérifie ensemble si j'ai bien compris.</p><span class="ftag">Ouverture · Montrer qu'on a lu</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">2</span><p>J'ai noté [point précis] — dis-moi si j'ai bien compris.</p><span class="ftag">Restitution ciblée</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">3</span><p>Tu n'as pas parlé de [sujet]. C'est volontaire ?</p><span class="ftag">Point absent du livrable</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">4</span><p>Tes priorités proposées — dans quel ordre tu les mettrais si tu devais n'en faire qu'une seule ?</p><span class="ftag">Clarification · Forcer le choix</span></div>
+      <div class="sub-label">Questions à déjouer</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">5</span><p>Non — parce que c'est un sujet à enjeu sur lequel je veux avoir ma propre lecture avant de déléguer complètement. C'est différent.</p><span class="ftag">Si : tu n'as pas confiance ?</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">6</span><p>Tu le sauras en même temps que les autres.</p><span class="ftag">Si : tes règles de fonctionnement ?</span></div>
+      <div class="sub-label">Clôture</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">7</span><p>Dans une dizaine de jours, je réunis tout le collectif N-1. Je vous présenterai ma synthèse et la façon dont je veux qu'on fonctionne ensemble. D'ici là, si quelque chose d'urgent remonte, tu m'appelles directement.</p><span class="ftag">Clôture · Prochaine étape collective</span></div>
+      <div class="sub-label">Profil · Études & Dev</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">8</span><p>Je compte sur toi comme pilier du delivery. Ce que tu pilotes, tu le pilotes vraiment — je ne serai pas dans tes réunions opérationnelles. En contrepartie, j'ai besoin que tu m'alertes tôt. Ça te convient ?</p><span class="ftag">Délégation · Études & Dev</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">9</span><p>Tu as une lecture du delivery que personne d'autre dans cette équipe n'a. Je veux m'appuyer dessus, pas la contourner.</p><span class="ftag">Signal · Études & Dev</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">10</span><p>J'ai l'impression que tu t'es limité dans tes propositions — est-ce que c'est volontaire ?</p><span class="ftag">Si livrable minimaliste</span></div>
+      <div class="sub-label">Profil · Exploitation</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">11</span><p>Ce que tu portes, tu le portes. Mais quand quelque chose vient de l'amont et que ça va impacter tes engagements — tu me le dis avant que ça explose côté utilisateurs.</p><span class="ftag">Signal · Exploitation</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">12</span><p>Y a-t-il des sujets que tu n'as pas mis dans ton livrable parce que tu ne savais pas comment les formuler ?</p><span class="ftag">Livrable trop lisse · Creuser</span></div>
+      <div class="sub-label">Profil · Infrastructures</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">13</span><p>Il y a des choses que tu n'as pas mises dans ce document parce qu'elles sont complexes à formuler — je veux qu'on en parle ici.</p><span class="ftag">Ce qui n'est pas dans le livrable</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">14</span><p>Tu sais ce que tu fais. Ce que je veux, c'est être dans la boucle sur les sujets à risque — pas sur le reste.</p><span class="ftag">Signal · Infra</span></div>
+      <div class="sub-label">Profil · Architecture</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">15</span><p>Je ne t'attends pas sur un portefeuille complet à ce stade. Ce que j'attends dans les 30 prochains jours : les 2-3 chantiers fondateurs et les interfaces critiques. On les valide ensemble.</p><span class="ftag">Signal · Architecture</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">16</span><p>Qu'est-ce que tu ferais en premier si tu avais l'aval demain ?</p><span class="ftag">Si livrable flou · Orienter</span></div>
+      <div class="sub-label">Profil · Pilotage</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">17</span><p>Tu vas jouer un rôle clé dans la préparation de notre premier CODIR. Je vais travailler étroitement avec toi sur ça. Tu es mon premier niveau de synthèse sur l'état du portefeuille.</p><span class="ftag">Signal · Pilotage</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">18</span><p>Est-ce qu'il y a des projets dans la feuille de route qui ne devraient plus y être — soit parce qu'ils ne sont pas réalistes, soit parce qu'ils n'ont plus de sponsor actif ?</p><span class="ftag">Feuille de route à recadrer</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">19</span><p>Comment tu vois ton rôle vis-à-vis des autres Directeurs au quotidien — coordinateur, facilitateur, arbitre ?</p><span class="ftag">Rôle inter-N-1</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">20</span><p>Dans ta lecture du portefeuille — quels sont les 2 ou 3 signaux qui t'inquiètent vraiment ?</p><span class="ftag">Pilotage · Signaux d'inquiétude</span></div>
+    </div>
   </div>
 
-  <div class="fcard" onclick="copyCard(this)"><span class="num">5</span>
-    <p>Je préfère vous répondre avec les bons éléments plutôt que d'improviser ici.</p>
-    <span class="ftag">Sérieux · Anti-improvisation</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">6</span>
-    <p>Je veux vérifier le périmètre exact avant de confirmer. Je reviens vers vous d'ici 48h avec une réponse claire.</p>
-    <span class="ftag">Rigueur · Engagement</span>
-  </div>
-
-  <div class="cat-header"><span class="cat-pill C">C</span><span class="cat-title">Recadrer sans blesser</span></div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">1</span>
-    <p>Ce n'est pas le sujet de ce moment. On voit ça en entretien individuel.</p>
-    <span class="ftag">Couloir · Dévier</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">2</span>
-    <p>Pour ce type de sujet, je veux être dans la boucle avant qu'une direction soit donnée.</p>
-    <span class="ftag">Consultant · Reprendre la main</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">3</span>
-    <p>Pour vos demandes courantes, votre interlocuteur principal c'est [N-1 référent]. Moi j'interviens sur les sujets d'arbitrage ou de cap.</p>
-    <span class="ftag">Métiers · Poser le canal</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">4</span>
-    <p>Je ne parle pas des personnes dans les couloirs. Viens me voir en privé si tu veux qu'on en parle sérieusement.</p>
-    <span class="ftag">Couloirs · Personnes</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">5</span>
-    <p>Note-le et envoie-moi un mail — on en parle dans le bon format.</p>
-    <span class="ftag">Recadrer · Bon canal</span>
-  </div>
-
-  <div class="cat-header"><span class="cat-pill D">D</span><span class="cat-title">Tenir la posture sous pression</span></div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">1</span>
-    <p>Je suis là en tant que DSI. C'est à ce titre que je parle — pas à un autre.</p>
-    <span class="ftag">Proximité PDG · Neutraliser</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">2</span>
-    <p>Je suis nommé par intérim avec une perspective de confirmation. Je m'implique pleinement dès aujourd'hui — l'intérim ne change pas mon niveau d'engagement.</p>
-    <span class="ftag">Légitimité · Intérim</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">3</span>
-    <p>Ce que j'apporte, ce n'est pas 20 ans de DSI — c'est 6 ans de regard transverse sur cette organisation. L'expérience technique, elle est dans cette salle.</p>
-    <span class="ftag">Âge · Retourner en atout</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">4</span>
-    <p>Je n'ai pas d'agenda caché là-dessus. Je ne prends pas de décision sur les équipes avant d'avoir fait mon propre diagnostic — rien ne changera sans qu'on en parle.</p>
-    <span class="ftag">Équipes · Rassurer sans promettre</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">5</span>
-    <p>Sur un sujet technique précis : ce n'est pas mon rôle de trancher sur le fond. Mon rôle, c'est de m'assurer que les bons experts sont mobilisés et que ça avance.</p>
-    <span class="ftag">Test technique · Ne pas se piéger</span>
-  </div>
-
-  <div class="cat-header"><span class="cat-pill E">E</span><span class="cat-title">Annoncer un arbitrage ou un non</span></div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">1</span>
-    <p>Dans 30 jours, je reviens vers vous avec mes priorités. Certains de vos sujets y seront. D'autres devront attendre — je vous le dirai franchement.</p>
-    <span class="ftag">Métiers · Calibrer les attentes</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">2</span>
-    <p>Je te confirme la responsabilité pleine sur [périmètre X]. Sur [sujet Y], je reste dans la boucle pour l'instant — pas parce que je n'ai pas confiance, mais parce que c'est un sujet à enjeu fort.</p>
-    <span class="ftag">N-1 · Délégation nuancée</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">3</span>
-    <p>Ce que je peux garantir, c'est ma franchise. Le reste, je te dirai ce que je pense quand j'aurai les éléments.</p>
-    <span class="ftag">Face à une demande de garantie</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">4</span>
-    <p>Ce n'est pas toujours la méthode le problème — parfois c'est le contexte ou les conditions dans lesquelles elle est mise en œuvre. On verra ce que ça donne avec un pilotage différent.</p>
-    <span class="ftag">Résistance au changement</span>
-  </div>
-
-  <div class="cat-header"><span class="cat-pill F">F</span><span class="cat-title">Gérer la pression relationnelle</span></div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">1</span>
-    <p>Je connais les gens et le contexte — ça m'aide. Mais connaître et piloter, c'est différent. Je prends le temps qu'il faut pour bien faire.</p>
-    <span class="ftag">Ancienneté · Garder la distance</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">2</span>
-    <p>Je prends ça comme une responsabilité. Je ne vais pas vous décevoir — mais donnez-moi le temps de bien faire les choses.</p>
-    <span class="ftag">Attentes élevées · Calibrer</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">3</span>
-    <p>Je préfère te parler de sujets, pas de personnes — pas encore.</p>
-    <span class="ftag">PDG · Ne pas rapporter sur les N-1</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">4</span>
-    <p>Dis-moi tout. Je veux comprendre ce qui s'est passé. Et si c'est un sujet à traiter, on le traitera.</p>
-    <span class="ftag">N-1 · Sujet non traité auparavant</span>
-  </div>
-
-  <div class="fcard" onclick="copyCard(this)"><span class="num">5</span>
-    <p>Je ne prends pas de décision RH dans mes premières semaines, sur la base d'une seule remontée. Faites-moi confiance pour faire mon propre diagnostic.</p>
-    <span class="ftag">DRH · Pression décision RH prématurée</span>
-  </div>
-
-  <p class="memo-hint">Tap une carte pour la copier · Toutes tes formulations clés</p>
+  <p class="memo-hint">Tap un titre pour déplier · Tap une carte pour la copier</p>
 </div>
 
 <!-- =================== DRILL =================== -->
 <div id="tab-drill" class="drill-section">
-
   <div class="filter-row">
     <button class="filter-btn on" onclick="setFilter('ALL',this)">Tout</button>
     <button class="filter-btn" onclick="setFilter('A',this)">A · Rôle</button>
@@ -402,15 +364,14 @@
     <button class="filter-btn" onclick="setFilter('D',this)">D · Pression</button>
     <button class="filter-btn" onclick="setFilter('E',this)">E · Arbitrage</button>
     <button class="filter-btn" onclick="setFilter('F',this)">F · Relation</button>
+    <button class="filter-btn" onclick="setFilter('G',this)">G · 1er RDV</button>
+    <button class="filter-btn" onclick="setFilter('H',this)">H · 2ème RDV</button>
   </div>
-
   <div class="prog-wrap"><div class="prog-fill" id="prog" style="width:0%"></div></div>
-
   <div class="nav-info">
     <span class="ctr" id="ctr">Scénario 1 / —</span>
     <span class="ctag" id="ctag"></span>
   </div>
-
   <div id="drill-main">
     <div class="scenario-box">
       <div class="s-label">Situation</div>
@@ -418,26 +379,21 @@
       <div class="s-text" id="s-text"></div>
       <span class="s-badge" id="s-badge"></span>
     </div>
-
     <textarea id="ua" placeholder="Tape ta réponse spontanée ici..."></textarea>
-
     <div class="btn-row">
       <button class="btn-p" id="sub-btn" onclick="submitAnswer()">Évaluer</button>
       <button class="btn-s" onclick="skipSc()">Passer →</button>
     </div>
-
     <div class="feedback-box" id="fb">
       <div class="feedback-inner">
         <div class="f-label">Retour coach</div>
         <div id="fc"></div>
       </div>
     </div>
-
     <div class="btn-row" id="next-row" style="display:none; margin-top:12px;">
       <button class="btn-p" onclick="nextSc()">Scénario suivant →</button>
     </div>
   </div>
-
   <div id="no-sc" class="no-sc" style="display:none;">
     Aucun scénario pour ce filtre.<br>
     <button class="btn-s" style="margin-top:12px;" onclick="setFilter('ALL', document.querySelector('.filter-btn'))">Voir tous</button>
@@ -455,40 +411,44 @@
 </div>
 
 <script>
-/* ======= SYSTEM PROMPT ======= */
 const SYS = `Tu es un coach expert en prise de poste DSI.
 Tu évalues les réponses d'un nouveau DSI en poste depuis moins d'une semaine, issu de l'interne (6 ans dans la même organisation, ancien conseiller du PDG).
 
-Il doit maîtriser 6 catégories de réflexes tirées de son playbook "BLAST-OFF" :
+Il doit maîtriser 8 catégories de réflexes tirées de son playbook "BLAST-OFF" :
 
 A — EXPLIQUER SON RÔLE
-Mots clés attendus : regard transverse, lien COMEX/IT, arbitrages au bon niveau, garant de la cohérence d'ensemble, gardien du temple (pas expert technique supplémentaire), défendre les engagements, complémentarité + transparence. Éviter : se noyer dans le technique, promettre des décisions rapides.
+Regard transverse, lien COMEX/IT, arbitrages au bon niveau, garant cohérence, gardien du temple (pas expert technique supplémentaire), défendre engagements, complémentarité + transparence.
 
 B — FAIRE PATIENTER / NE PAS IMPROVISER
-Mots clés : réponse fiable > réponse rapide, "c'est sur mon radar / sous 48h", "trop tôt pour répondre", "vérifier avant de confirmer", "ma propre lecture d'abord", "bons éléments plutôt qu'improviser". Ne jamais promettre une date ou un engagement sous pression.
+Réponse fiable > rapide, "sur mon radar / 48h", "trop tôt", "vérifier avant confirmer", "ma propre lecture d'abord", "bons éléments plutôt qu'improviser", "je vous le dirai à tous en même temps dans 30 jours".
 
 C — RECADRER SANS BLESSER
-Dévier vers le bon canal (N-1 pour l'opérationnel, pas le DSI), refuser de statuer dans le couloir ou sur des personnes, garder la main sur le consultant (informé avant que ça parte), pas de décision sans être dans la boucle.
+Dévier vers le bon canal, refuser de statuer dans le couloir ou sur des personnes, garder la main sur le consultant, ne pas résoudre en séance ("je note, on verra ça dans un deuxième temps").
 
 D — TENIR LA POSTURE SOUS PRESSION
-Neutraliser la proximité PDG ("je suis là en tant que DSI"), tenir sur l'intérim ("pleinement engagé dès aujourd'hui"), retourner l'âge en atout (regard transverse vs expertise technique), pas d'agenda caché sur les équipes, ne pas se faire piéger sur le technique (mobiliser les experts, ne pas trancher).
+Neutraliser proximité PDG, tenir sur l'intérim, retourner l'âge en atout, ne pas se faire piéger sur le technique ("c'est ton domaine, je veux d'abord ta lecture"), retourner les tests de légitimité en question.
 
 E — ANNONCER UN ARBITRAGE OU UN NON
-Calibrer les attentes à 30 jours, déléguer avec nuance (pas de défiance mais sujet à enjeu), garantir la franchise pas les résultats, résistance au changement = contexte pas méthode.
+Calibrer attentes 30 jours, déléguer avec nuance (pas de défiance), garantir la franchise pas les résultats, résistance = contexte pas méthode.
 
 F — GÉRER LA PRESSION RELATIONNELLE
-Connaître ≠ piloter (ne pas court-circuiter grâce à l'ancienneté), parler sujets pas personnes avec le PDG, écouter sans promettre, pas de décision RH prématurée sur une seule remontée.
+Connaître ≠ piloter, parler sujets pas personnes avec le PDG, écouter sans promettre, pas de décision RH prématurée.
+
+G — CONDUIRE LE 1ER ENTRETIEN N-1 (J2-J5, 90 min)
+Objectif : comprendre la réalité réelle (pas la version officielle). Créer la confiance ("ce n'est pas un entretien d'évaluation, ce qu'on se dit reste entre nous"). Poser les bonnes questions sur les risques à 60 jours, les signaux faibles, ce qui se dit dans les couloirs. Relancer quand c'est trop lisse ("et si je demandais à ton équipe ?", "j'ai l'impression que tu te limites"). Ne pas résoudre en séance. Ne pas réagir aux sujets politiques ("je note, j'ai besoin de me faire ma propre opinion"). Adapter l'ouverture au profil : Études&Dev = delivery exposé, Exploitation = bout de chaîne qui absorbe, Infra = lecture longue, Architecture = périmètre à définir, Pilotage = vision transverse. Face à un test de maîtrise technique : "c'est ton domaine, je veux d'abord comprendre ta lecture".
+
+H — CONDUIRE LE 2ÈME ENTRETIEN N-1 (J18-J25, 45 min, sur base des livrables)
+Objectif : restituer sa lecture, clarifier les points ambigus, envoyer les signaux de délégation. Montrer qu'on a lu ("j'ai noté [point précis]"). Creuser les absences ("tu n'as pas parlé de [sujet], c'est volontaire ?"). Forcer le choix sur les priorités. Formuler la délégation clairement et différemment selon le profil : Études&Dev = pilier delivery autonome avec alerte tôt, Exploitation = porte ses engagements mais remonte l'amont avant explosion, Infra = confirmation du fonctionnement existant (ne pas "accorder" ce qui est déjà acquis), Architecture = 2-3 chantiers fondateurs et interfaces critiques, Pilotage = synthèse portefeuille + rôle CODIR. Clore sur la réunion collective N-1 dans 10 jours. Face à "tu gardes ce sujet parce que tu n'as pas confiance ?" : "non — parce que c'est un sujet à enjeu, c'est différent."
 
 CRITÈRES D'ÉVALUATION :
-- Couverture des éléments clés de la catégorie
-- Ton : autorité naturelle, sans arrogance ni mollesse, sans déférence excessive
+- Couverture des éléments clés de la catégorie et du profil concerné
+- Ton : autorité naturelle, sans arrogance ni mollesse
 - Fluidité — ça doit sonner comme quelqu'un qui parle, pas qui récite
-- Posture juste vis-à-vis de l'interlocuteur spécifique
+- Posture juste vis-à-vis de l'interlocuteur spécifique et de son profil
 
 Réponds UNIQUEMENT en JSON strict, zéro texte avant ou après :
 {"score":<1 à 5>,"feedback":"<2-3 phrases bienveillantes et précises>","suggestion":"<reformulation courte qui reprend l'esprit mais améliore le fond ou le ton>"}`;
 
-/* ======= SCENARIOS ======= */
 const SC = [
   // — A —
   { cat:'A', who:'Chef de projet IT · J1 matin', text:"Bienvenue ! Concrètement, vous allez faire quoi de différent de l'ancienne DSI ? Quel est votre rôle exactement ?" },
@@ -502,7 +462,7 @@ const SC = [
   { cat:'B', who:'Directeur métier · couloir J2', text:"On a un problème urgent sur le projet CRM, j'ai besoin que vous tranchiez aujourd'hui." },
   { cat:'B', who:'Membre COMEX · en séance', text:"On avait un engagement sur la livraison du portail RH en mars — ça tient toujours ?" },
   { cat:'B', who:'Chef de projet · appel urgent', text:"Le projet est en retard de 3 semaines. J'ai besoin que vous validiez qu'on repousse la date officielle avant que ça remonte au COMEX." },
-  { cat:'B', who:'Manager IT · réunion d\'équipe', text:"J'avais une décision à prendre sur l'architecture infra depuis 3 mois. Est-ce que vous pouvez trancher maintenant qu'on peut avancer ?" },
+  { cat:'B', who:'Manager IT · réunion d\'équipe', text:"J'avais une décision à prendre sur l'architecture infra depuis 3 mois. Est-ce que vous pouvez trancher maintenant ?" },
   { cat:'B', who:'Directeur métier · première réunion', text:"Quand est-ce que vous livrez le projet ERP ? On avait une date promise par l'ancien DSI." },
   { cat:'B', who:'PDG · fin de semaine 1', text:"Alors, c'est quoi ton sentiment sur la situation ? Tu as une première lecture ?" },
 
@@ -525,35 +485,66 @@ const SC = [
   { cat:'E', who:'Directeur métier · réunion de cadrage', text:"On avait déjà essayé cette approche, ça n'avait pas marché. Pourquoi ça marcherait cette fois ?" },
   { cat:'E', who:'Équipe DSI · réunion collective J1', text:"Est-ce que tu vas tout changer dans notre façon de fonctionner ?" },
   { cat:'E', who:'Directeur métier · sous pression', text:"On n'a jamais de réponse de la DSI. Vous allez vraiment changer ça ou c'est encore des promesses ?" },
-  { cat:'E', who:'N-1 · fin d\'entretien individuel', text:"Qu'est-ce qui va changer dans mon périmètre ? J'ai besoin de savoir si je peux continuer à travailler comme avant." },
 
   // — F —
   { cat:'F', who:'Collaborateur de longue date · couloir', text:"Tu connais déjà tout ici, tu vas aller vite non ? On peut compter sur toi pour débloquer nos sujets rapidement." },
   { cat:'F', who:'PDG · fin de semaine 1', text:"C'est quoi ton ressenti sur [N-1 X] ? Tu penses qu'il est à la hauteur ?" },
   { cat:'F', who:'N-1 · fin d\'entretien individuel', text:"On avait remonté ce problème plusieurs fois à l'ancienne DSI, ça n'avait jamais été traité. Tu vas faire quoi, toi ?" },
   { cat:'F', who:'DRH · en aparté J4', text:"Il y a un collaborateur dans ton équipe dont on surveille les résultats depuis 6 mois. Je pense que tu devrais prendre une décision rapidement." },
+
+  // — G — 1er entretien N-1
+  { cat:'G', who:'N-1 Études & Dev · 1er entretien J3', text:"Sur la dette technique, on sait exactement ce qu'il faut faire. J'ai déjà un plan complet si vous voulez je vous le présente maintenant.", profil:'Études & Dev' },
+  { cat:'G', who:'N-1 Études & Dev · 1er entretien', text:"Tout se passe bien, on s'adapte, les équipes gèrent. Les projets avancent normalement.", profil:'Études & Dev' },
+  { cat:'G', who:'N-1 Exploitation · 1er entretien J2', text:"On s'en sort. On a l'habitude d'absorber les aléas. Ça fait partie du métier.", profil:'Exploitation' },
+  { cat:'G', who:'N-1 Exploitation · 1er entretien', text:"Les dépendances avec Études & Dev ? Ça se gère. On s'arrange toujours d'une façon ou d'une autre.", profil:'Exploitation' },
+  { cat:'G', who:'N-1 Infrastructures · 1er entretien J4', text:"[Silence poli, répond aux questions mais ne s'engage pas, posture d'attente.]", profil:'Infrastructures' },
+  { cat:'G', who:'N-1 Infrastructures · 1er entretien', text:"Sur les outils de supervision, on a essayé plusieurs choses qui n'ont pas marché. Je ne vais pas vous faire une liste de plus.", profil:'Infrastructures' },
+  { cat:'G', who:'N-1 Architecture · 1er entretien J2', text:"Mon périmètre ? C'est encore flou. Je n'ai pas encore de vision claire sur ce que je dois piloter exactement.", profil:'Architecture' },
+  { cat:'G', who:'N-1 Pilotage · 1er entretien J3', text:"La feuille de route actuelle ? Elle est trop chargée mais tout le monde le sait. On ne peut pas tout faire.", profil:'Pilotage' },
+  { cat:'G', who:'N-1 Pilotage · 1er entretien', text:"Sur [N-1 Y], je vais être honnête avec vous, il y a des sujets de fond que vous devrez regarder de près.", profil:'Pilotage' },
+  { cat:'G', who:'N-1 Études & Dev · en séance', text:"Donc si j'ai bien compris, tu penses qu'on devrait refondre toute l'architecture de déploiement ? C'est ça ton diagnostic ?", profil:'Études & Dev' },
+
+  // — H — 2ème entretien N-1
+  { cat:'H', who:'N-1 Études & Dev · 2ème entretien J20', text:"[Son livrable est une liste de 3 projets avec 2 lignes chacun, sans aucun risque identifié, sans vision delivery.]", profil:'Études & Dev' },
+  { cat:'H', who:'N-1 Études & Dev · 2ème entretien', text:"Je veux bien piloter le delivery, mais j'ai besoin que tu sois dans les réunions clés pour arbitrer quand ça bloque.", profil:'Études & Dev' },
+  { cat:'H', who:'N-1 Exploitation · 2ème entretien J22', text:"[Son livrable est propre mais ne mentionne aucune dépendance amont, alors que tu sais qu'il y en a des critiques.]", profil:'Exploitation' },
+  { cat:'H', who:'N-1 Infrastructures · 2ème entretien J19', text:"Tu gardes la boucle sur le projet de renouvellement des licences parce que tu n'as pas confiance dans ma capacité à négocier ?", profil:'Infrastructures' },
+  { cat:'H', who:'N-1 Architecture · 2ème entretien J21', text:"[Son livrable est conceptuel, parle de principes et de gouvernance, mais aucun chantier concret n'est identifié ni priorisé.]", profil:'Architecture' },
+  { cat:'H', who:'N-1 Pilotage · 2ème entretien J18', text:"Dans ma lecture du portefeuille, j'ai identifié 4 projets qui ne devraient plus être dans la feuille de route. Mais c'est politiquement compliqué à dire.", profil:'Pilotage' },
+  { cat:'H', who:'N-1 Pilotage · 2ème entretien', text:"Comment tu vois mon rôle vis-à-vis des autres directeurs ? Parce que jusqu'ici, je suis perçu comme le flic du portefeuille.", profil:'Pilotage' },
+  { cat:'H', who:'N-1 Exploitation · 2ème entretien', text:"Et c'est quoi tes règles de fonctionnement avec nous ? Comment tu veux qu'on travaille ensemble ?", profil:'Exploitation' },
+  { cat:'H', who:'N-1 Études & Dev · clôture', text:"OK donc tu me délègues le delivery. Mais si quelque chose dérape, tu me couvres vis-à-vis du COMEX ?", profil:'Études & Dev' },
+  { cat:'H', who:'N-1 Infrastructures · 2ème entretien', text:"Il y a un sujet sur les contrats fournisseurs que je n'ai pas mis dans mon livrable parce que c'est sensible politiquement — ça implique des gens au COMEX.", profil:'Infrastructures' },
 ];
 
-/* ======= STATE ======= */
-let filter = 'ALL', shuffled = [], cur = 0, results = [];
+const LABELS = {
+  A:'Cat. A — Rôle', B:'Cat. B — Patience', C:'Cat. C — Recadrer',
+  D:'Cat. D — Pression', E:'Cat. E — Arbitrage', F:'Cat. F — Relation',
+  G:'Cat. G — 1er entretien N-1', H:'Cat. H — 2ème entretien N-1'
+};
+const BADGE_TXT = {
+  A:'→ Expliquer ton rôle', B:'→ Faire patienter', C:'→ Recadrer sans blesser',
+  D:'→ Tenir la posture', E:'→ Annoncer un arbitrage', F:'→ Gérer la relation',
+  G:'→ Conduire le 1er entretien', H:'→ Conduire le 2ème entretien'
+};
 
-const LABELS = { A:'Catégorie A — Rôle', B:'Catégorie B — Patience', C:'Catégorie C — Recadrer', D:'Catégorie D — Pression', E:'Catégorie E — Arbitrage', F:'Catégorie F — Relation' };
-const BADGE_TXT = { A:'→ Expliquer ton rôle', B:'→ Faire patienter', C:'→ Recadrer sans blesser', D:'→ Tenir la posture', E:'→ Annoncer un arbitrage', F:'→ Gérer la relation' };
+let activeFilter = 'ALL', shuffled = [], cur = 0, results = [];
 
-/* ======= FILTER ======= */
 function setFilter(cat, btn) {
-  filter = cat;
+  activeFilter = cat;
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
   initDrill();
 }
 
-/* ======= DRILL ======= */
-function initDrill() {
-  const pool = filter === 'ALL' ? SC : SC.filter(s => s.cat === filter);
-  shuffled = [...pool].sort(() => Math.random() - 0.5);
-  cur = 0; results = [];
+function getFiltered() {
+  return activeFilter === 'ALL' ? SC : SC.filter(s => s.cat === activeFilter);
+}
 
+function initDrill() {
+  const pool = getFiltered();
+  shuffled = [...pool].sort(() => Math.random() - .5);
+  cur = 0; results = [];
   const dm = document.getElementById('drill-main');
   const ns = document.getElementById('no-sc');
   if (!shuffled.length) { dm.style.display='none'; ns.style.display='block'; return; }
@@ -569,37 +560,27 @@ function loadSc() {
   document.getElementById('ctr').textContent = `Scénario ${cur+1} / ${shuffled.length}`;
   document.getElementById('ctag').textContent = LABELS[s.cat];
   document.getElementById('prog').style.width = `${(cur/shuffled.length)*100}%`;
-
   const badge = document.getElementById('s-badge');
   badge.textContent = BADGE_TXT[s.cat];
   badge.className = `s-badge b${s.cat}`;
-
   document.getElementById('ua').value = '';
   document.getElementById('fb').classList.remove('show');
   document.getElementById('next-row').style.display = 'none';
   document.getElementById('sub-btn').disabled = false;
 }
 
-/* ======= SUBMIT ======= */
 async function submitAnswer() {
   const ans = document.getElementById('ua').value.trim();
   if (!ans) return;
-
   const s = shuffled[cur];
-  const btn = document.getElementById('sub-btn');
-  btn.disabled = true;
-
+  document.getElementById('sub-btn').disabled = true;
   const fb = document.getElementById('fb');
   const fc = document.getElementById('fc');
   fb.classList.add('show');
   fc.innerHTML = '<div class="loading-dots"><span></span><span></span><span></span></div>';
 
-  const prompt = `Catégorie : ${LABELS[s.cat]}
-Interlocuteur : ${s.who}
-Situation : "${s.text}"
-Réponse du DSI : "${ans}"
-
-Évalue selon les critères de la catégorie ${s.cat}.`;
+  const profilCtx = s.profil ? `\nProfil du N-1 : ${s.profil}` : '';
+  const prompt = `Catégorie : ${LABELS[s.cat]}${profilCtx}\nInterlocuteur : ${s.who}\nSituation : "${s.text}"\nRéponse du DSI : "${ans}"\nÉvalue selon les critères de la catégorie ${s.cat}.`;
 
   try {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
@@ -609,85 +590,76 @@ Réponse du DSI : "${ans}"
         model: 'claude-sonnet-4-5',
         max_tokens: 1000,
         system: SYS,
-        messages: [{ role:'user', content: prompt }]
+        messages: [{ role: 'user', content: prompt }]
       })
     });
-
     const data = await res.json();
     const raw = data.content.map(i => i.text||'').join('');
     const parsed = JSON.parse(raw.replace(/```json|```/g,'').trim());
-
     const dots = Array.from({length:5}, (_,i) =>
       `<span class="dot${i < parsed.score ? ' on':''}"></span>`
     ).join('');
-
     fc.innerHTML = `
-      <div class="f-score">
-        <div class="score-dots">${dots}</div>
-        <span style="font-size:12px;color:var(--muted)">${parsed.score}/5</span>
-      </div>
+      <div class="f-score"><div class="score-dots">${dots}</div><span style="font-size:12px;color:var(--muted)">${parsed.score}/5</span></div>
       <div class="f-text">${parsed.feedback}</div>
-      <div class="f-sug">"${parsed.suggestion}"</div>
-    `;
-
+      <div class="f-sug">"${parsed.suggestion}"</div>`;
     results.push({ s, ans, score: parsed.score, suggestion: parsed.suggestion });
-
   } catch(e) {
     console.error(e);
     fc.innerHTML = `<p class="f-text" style="color:var(--accent)">Erreur : ${e.message}</p>`;
-    btn.disabled = false;
+    document.getElementById('sub-btn').disabled = false;
     return;
   }
-
   document.getElementById('next-row').style.display = 'flex';
 }
 
 function skipSc() { cur++; loadSc(); }
 function nextSc() { cur++; loadSc(); }
 
-/* ======= RESULTS ======= */
 function showResults() {
   document.getElementById('prog').style.width = '100%';
   switchTab('results');
-
   const avg = results.length
-    ? (results.reduce((a,b) => a+b.score, 0) / results.length).toFixed(1)
-    : '—';
-
+    ? (results.reduce((a,b) => a+b.score, 0) / results.length).toFixed(1) : '—';
   document.getElementById('r-avg').textContent = `${avg} / 5`;
-  document.getElementById('r-count').textContent = `${results.length} scénario${results.length>1?'s':''} évalué${results.length>1?'s':''}`;
-
+  document.getElementById('r-count').textContent =
+    `${results.length} scénario${results.length>1?'s':''} évalué${results.length>1?'s':''}`;
   let html = '';
   results.forEach(r => {
+    const profil = r.s.profil ? ` · ${r.s.profil}` : '';
     html += `<div class="rcard">
-      <div class="rw">${r.s.who}</div>
+      <div class="rw">${r.s.who}${profil}</div>
       <div class="ra">"${r.ans}"</div>
       <div class="rs">→ ${r.suggestion}</div>
       <div class="rsc">${'●'.repeat(r.score)}${'○'.repeat(5-r.score)} ${r.score}/5</div>
     </div>`;
   });
-
   document.getElementById('r-list').innerHTML = html;
 }
 
 function restartDrill() { switchTab('drill'); initDrill(); }
 
-/* ======= TABS ======= */
 function switchTab(tab) {
-  ['memo','drill','results'].forEach((t, i) => {
+  ['memo','drill','results'].forEach((t,i) => {
     document.querySelectorAll('.tab-btn')[i].classList.toggle('active', t===tab);
     document.getElementById(`tab-${t}`).classList.toggle('active', t===tab);
   });
   if (tab === 'drill' && !shuffled.length) initDrill();
 }
 
-/* ======= COPY ======= */
 function copyCard(el) {
   navigator.clipboard.writeText(el.querySelector('p').textContent).then(() => {
     const o = el.style.borderColor;
     el.style.borderColor = 'var(--green)';
     setTimeout(() => el.style.borderColor = o, 650);
   });
+}
+
+function tog(btn) {
+  const body = btn.nextElementSibling;
+  const isOpen = body.classList.contains('open');
+  btn.classList.toggle('open', !isOpen);
+  body.classList.toggle('open', !isOpen);
 }
 
 initDrill();
