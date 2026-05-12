@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -19,6 +20,10 @@
     --rose: #8b1a4c;
     --orange: #a05c10;
     --navy: #0e2d5a;
+  --sage: #3d6b4f;
+  --crimson: #7a1a2e;
+  --forest: #1e4d35;
+  --slate: #2d3a4a;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif; min-height:100vh; padding:20px 15px 60px; max-width:640px; margin:0 auto; }
@@ -75,6 +80,10 @@
   .bF{background:rgba(139,26,76,.2);color:#f07aaa;}
   .bG{background:rgba(160,92,16,.2);color:#f0b870;}
   .bH{background:rgba(14,45,90,.2);color:#7aaff0;}
+  .bI{background:rgba(61,107,79,.2);color:#7ecba1;}
+  .bJ{background:rgba(122,26,46,.2);color:#f07a90;}
+  .bK{background:rgba(30,77,53,.2);color:#7ecba1;}
+  .bL{background:rgba(45,58,74,.2);color:#a0b4cc;}
   textarea { width:100%; min-height:100px; background:white; border:1.5px solid #ddd9d0; border-radius:10px; padding:12px 14px; font-family:'DM Sans',sans-serif; font-size:14px; color:var(--ink); resize:vertical; outline:none; transition:border-color .15s; line-height:1.6; }
   textarea:focus { border-color:var(--accent); }
   textarea::placeholder { color:#c0bdb6; }
@@ -130,6 +139,10 @@
   .cpF{background:rgba(139,26,76,.12);color:var(--rose);}
   .cpG{background:rgba(160,92,16,.12);color:var(--orange);}
   .cpH{background:rgba(14,45,90,.12);color:var(--navy);}
+  .cpI{background:rgba(61,107,79,.12);color:var(--sage);}
+  .cpJ{background:rgba(122,26,46,.12);color:var(--crimson);}
+  .cpK{background:rgba(30,77,53,.12);color:var(--forest);}
+  .cpL{background:rgba(45,58,74,.12);color:var(--slate);}
   .sub-label { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; font-weight:600; color:var(--muted); padding:10px 4px 4px; margin-bottom:6px; border-top:1px solid #ede9df; }
   .sub-label.first { border-top:none; padding-top:2px; }
 </style>
@@ -149,9 +162,11 @@
 </div>
 
 <!-- =================== MEMO =================== -->
+
 <div id="tab-memo" class="memo-section active">
 
   <!-- A -->
+
   <div class="acc-item">
     <button class="acc-trigger" onclick="tog(this)">
       <span class="acc-pill cpA">A</span>
@@ -170,6 +185,7 @@
   </div>
 
   <!-- B -->
+
   <div class="acc-item">
     <button class="acc-trigger" onclick="tog(this)">
       <span class="acc-pill cpB">B</span>
@@ -191,6 +207,7 @@
   </div>
 
   <!-- C -->
+
   <div class="acc-item">
     <button class="acc-trigger" onclick="tog(this)">
       <span class="acc-pill cpC">C</span>
@@ -212,6 +229,7 @@
   </div>
 
   <!-- D -->
+
   <div class="acc-item">
     <button class="acc-trigger" onclick="tog(this)">
       <span class="acc-pill cpD">D</span>
@@ -234,6 +252,7 @@
   </div>
 
   <!-- E -->
+
   <div class="acc-item">
     <button class="acc-trigger" onclick="tog(this)">
       <span class="acc-pill cpE">E</span>
@@ -254,6 +273,7 @@
   </div>
 
   <!-- F -->
+
   <div class="acc-item">
     <button class="acc-trigger" onclick="tog(this)">
       <span class="acc-pill cpF">F</span>
@@ -274,6 +294,7 @@
   </div>
 
   <!-- G -->
+
   <div class="acc-item">
     <button class="acc-trigger" onclick="tog(this)">
       <span class="acc-pill cpG">G</span>
@@ -312,6 +333,7 @@
   </div>
 
   <!-- H -->
+
   <div class="acc-item">
     <button class="acc-trigger" onclick="tog(this)">
       <span class="acc-pill cpH">H</span>
@@ -351,10 +373,140 @@
     </div>
   </div>
 
+  <!-- I -->
+
+  <div class="acc-item">
+    <button class="acc-trigger" onclick="tog(this)">
+      <span class="acc-pill cpI">I</span>
+      <span class="acc-title">Sortir de l'opérationnel en réunion</span>
+      <span class="acc-count">10 formulations</span>
+      <span class="acc-chevron">▼</span>
+    </button>
+    <div class="acc-body">
+      <div class="sub-label first">Remonter le niveau de la discussion</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">1</span><p>C'est un bon niveau de détail — la question pour moi c'est : quel est l'impact sur la décision qu'on doit prendre aujourd'hui ?</p><span class="ftag">Rediriger vers l'arbitrage</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">2</span><p>Je vais laisser vos équipes trancher sur le technique. Ce que je veux comprendre, c'est : qu'est-ce qui bloque la décision, et de qui ça dépend ?</p><span class="ftag">Sortir du technique · Qui décide</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">3</span><p>On est en train de rentrer dans un niveau de détail que je vais laisser à vos équipes. Revenons à la question : qu'est-ce que vous attendez de moi sur ce sujet ?</p><span class="ftag">Recentrer · Rôle du DSI</span></div>
+      <div class="sub-label">Quand la réunion vire au comité technique</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">4</span><p>Je vous arrête là parce qu'on est en train de résoudre un problème technique en CODIR — ce n'est pas le bon endroit. Qui prend la main pour cadrer ça en dehors de cette salle ?</p><span class="ftag">Stopper · Déléguer hors séance</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">5</span><p>Je n'ai pas besoin de comprendre le comment — j'ai besoin de comprendre le risque et l'impact si on ne décide pas aujourd'hui.</p><span class="ftag">Risque · Impact · Décision</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">6</span><p>Ce débat technique est légitime — mais il ne se règle pas ici. Ce qui se règle ici, c'est la priorisation et les ressources. Sur ça, où est-ce qu'on en est ?</p><span class="ftag">Priorisation · Ressources</span></div>
+      <div class="sub-label">Garder la posture sans paraître distant</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">7</span><p>Je ne rentre pas dans ce niveau de détail en séance — mais ça m'intéresse : faites-moi une note d'une page avec vos conclusions et votre recommandation.</p><span class="ftag">Déléguer · Demander une synthèse</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">8</span><p>Je vous fais confiance sur le technique. Ce que j'attends de vous, c'est une recommandation claire — pas un exposé du problème.</p><span class="ftag">Posture DSI · Demander une reco</span></div>
+      <div class="sub-label">Face à quelqu'un qui cherche une validation technique</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">9</span><p>C'est votre domaine d'expertise — je n'ai pas vocation à valider le choix technique. En revanche, donnez-moi les critères de décision et les risques associés.</p><span class="ftag">Expertise · Critères de décision</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">10</span><p>La question technique, je vous la laisse. La question que je me pose, c'est : est-ce que ce choix s'inscrit dans la trajectoire qu'on s'est fixée ?</p><span class="ftag">Cohérence stratégique · Trajectoire</span></div>
+    </div>
+  </div>
+
+  <!-- J -->
+
+  <div class="acc-item">
+    <button class="acc-trigger" onclick="tog(this)">
+      <span class="acc-pill cpJ">J</span>
+      <span class="acc-title">Défendre le périmètre DSI face au COMEX</span>
+      <span class="acc-count">11 formulations</span>
+      <span class="acc-chevron">▼</span>
+    </button>
+    <div class="acc-body">
+      <div class="sub-label first">Reconnaître sans concéder — principe général</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">1</span><p>Tu as raison de soulever la question — et ton expertise sur le front-end est un atout. La question de la gouvernance, c'est-à-dire qui décide et qui valide, ça reste de mon côté.</p><span class="ftag">Reconnaître l'expertise · Verrouiller la gouvernance</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">2</span><p>Je ne dis pas que tu n'as pas ton mot à dire — je dis que c'est moi qui tranche. Tu peux contribuer, tu es dans la boucle, mais la décision finale est DSI.</p><span class="ftag">Contribution ≠ Décision</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">3</span><p>On peut travailler ensemble sur ce sujet — mais sous ma gouvernance, pas en co-pilotage. Je te propose qu'on définisse ton rôle en dehors de cette salle.</p><span class="ftag">Collaboration · Pas co-pilotage</span></div>
+      <div class="sub-label">Sur le cas SIRH / front-end / Transfo Digitale</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">4</span><p>Le front-end du SIRH, c'est de la DSI. Que les éditeurs ne sachent pas le produire, ça crée une contrainte de sourcing — pas un transfert de périmètre. On gère ce sourcing ensemble si tu as des compétences à apporter, mais je reste pilote.</p><span class="ftag">SIRH · Front-end · Sourcing ≠ Périmètre</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">5</span><p>Je comprends ton intérêt pour ce sujet — et honnêtement, ton regard Digital peut être utile. Mais ça ne change pas qui est responsable du projet. Ce projet SI est dans mon périmètre, point.</p><span class="ftag">Intérêt légitime · Responsabilité DSI ferme</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">6</span><p>La frontière entre Digital et SI, c'est un vrai sujet — et je propose qu'on le règle dans un cadre clair, avec le PDG si nécessaire. Mais pas au cas par cas, et pas sur ce projet en particulier.</p><span class="ftag">Frontière Digital/SI · Cadrage au bon niveau</span></div>
+      <div class="sub-label">Quand la pression vient du COMEX en séance</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">7</span><p>Je prends note de la demande. Ce n'est pas le bon endroit pour trancher une question de périmètre — je propose qu'on en parle directement avec le PDG pour que ce soit clair pour tout le monde.</p><span class="ftag">Escalader au PDG · Ne pas trancher en séance</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">8</span><p>Je ne vais pas répondre à chaud sur un sujet de gouvernance. Donnez-moi 48h pour vous revenir avec une position claire.</p><span class="ftag">Ne pas répondre sous pression · 48h</span></div>
+      <div class="sub-label">Après un recadrage trop sec — réparer sans reculer</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">9</span><p>Je voulais revenir sur notre échange de la semaine dernière. J'ai été direct — peut-être trop sec. Le fond reste le même : c'est mon périmètre. Mais je veux qu'on travaille bien ensemble, et je suis prêt à définir comment tu peux contribuer utilement.</p><span class="ftag">Réparer la relation · Tenir la position</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">10</span><p>Ce que je t'ai dit reste vrai. Ce que j'aurais dû ajouter, c'est : comment on fait pour que ton expertise soit utile sans créer de confusion sur qui décide.</p><span class="ftag">Corriger le ton · Pas le fond</span></div>
+      <div class="sub-label">Principe de posture — à intérioriser</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">11</span><p>Reconnaître l'expertise d'un directeur COMEX, c'est lui montrer que tu l'as entendu. Verrouiller la gouvernance, c'est lui montrer que tu tiens ton rôle. Les deux ensemble évitent de créer un ennemi.</p><span class="ftag">Rappel de posture · Usage interne</span></div>
+    </div>
+  </div>
+
+  <!-- K -->
+
+  <div class="acc-item">
+    <button class="acc-trigger" onclick="tog(this)">
+      <span class="acc-pill cpK">K</span>
+      <span class="acc-title">Devenir détenteur du cadre et des arbitrages</span>
+      <span class="acc-count">14 formulations</span>
+      <span class="acc-chevron">▼</span>
+    </button>
+    <div class="acc-body">
+      <div class="sub-label first">Mécanique — pourquoi ça marche</div>
+      <div class="fcard" style="background:var(--cream);border-color:#ccc9c0;cursor:default;">
+        <p style="font-size:12.5px;color:var(--muted);font-style:italic;">Le cadre ne s'impose pas par la force — il se pose par la clarté. Chaque fois que tu laisses une décision se prendre sans toi, tu valides implicitement que ce n'était pas ton périmètre. La règle : nommer le circuit avant que la situation ne force ta main.</p>
+      </div>
+      <div class="sub-label">Poser le cadre en amont — proactif</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">1</span><p>Je vais vous dire comment je veux qu'on fonctionne sur ce type de sujet — et ensuite on voit votre question dans ce cadre-là.</p><span class="ftag">Installer la règle avant la situation</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">2</span><p>Sur les décisions de ce niveau, je veux être dans la boucle avant que ça parte — pas pour bloquer, mais pour que je puisse assumer ce qui est décidé.</p><span class="ftag">Circuit d'arbitrage · Responsabilité</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">3</span><p>Dans les 10 prochains jours, je vais vous présenter à tous les règles de fonctionnement que je veux instaurer. D'ici là, sur les sujets à enjeu, je veux être consulté avant décision.</p><span class="ftag">Transition de gouvernance · Collectif</span></div>
+      <div class="sub-label">Reprendre la main après une décision prise sans toi</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">4</span><p>Je comprends que ça devait avancer. À l'avenir, ce type de décision passe par moi avant d'être envoyée. Ce n'est pas un reproche — c'est une règle de fonctionnement.</p><span class="ftag">Recadrer sans punir · Poser la règle</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">5</span><p>On revient en arrière sur ce point. Je n'ai pas validé, et je ne suis pas en mesure de défendre une décision que je n'ai pas vue.</p><span class="ftag">Annuler sans agressivité</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">6</span><p>Je ne remets pas en cause ton initiative — je remets en cause le circuit. Ce n'est pas pareil.</p><span class="ftag">Distinguer l'acte du circuit</span></div>
+      <div class="sub-label">Recadrer une dérive en séance</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">7</span><p>Je t'arrête là — on est en train de prendre une décision qui relève de mon niveau. Je la note, on y revient en bilatéral.</p><span class="ftag">Stopper · Reprendre hors séance</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">8</span><p>Ce n'est pas le bon endroit pour cet arbitrage. Je prends le sujet — donnez-moi 48h.</p><span class="ftag">Saisir l'arbitrage · Délai clair</span></div>
+      <div class="sub-label">Rendre le circuit visible comme protection</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">9</span><p>Si tu portes ça sans que je l'aie vu, tu t'exposes. Passe par moi d'abord — je t'en protège.</p><span class="ftag">Circuit = protection pour eux</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">10</span><p>Je ne suis pas là pour freiner — je suis là pour que ce qui sort de la DSI soit défendable. Pour ça, j'ai besoin de voir les sujets avant qu'ils partent.</p><span class="ftag">Pourquoi le circuit existe</span></div>
+      <div class="sub-label">Clore un arbitrage sans laisser de porte ouverte</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">11</span><p>C'est arbitré. On avance comme ça.</p><span class="ftag">Clore · Bref · Sans appel</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">12</span><p>J'ai entendu les deux positions. Ma décision, c'est [X]. On n'y revient pas en séance.</p><span class="ftag">Arbitrage énoncé · Clôture ferme</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">13</span><p>Le débat est légitime — la décision est prise. Si tu as des éléments nouveaux, tu me les envoies par écrit et je regarde.</p><span class="ftag">Respecter sans rouvrir</span></div>
+      <div class="sub-label">Face à quelqu'un qui court-circuite le circuit</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">14</span><p>Tu es allé voir [X] avant de venir me voir. Je comprends pourquoi. Pour la suite, le bon ordre c'est : moi d'abord, eux ensuite si besoin.</p><span class="ftag">Court-circuit · Réordonner sans punir</span></div>
+    </div>
+  </div>
+
+  <!-- L -->
+
+  <div class="acc-item">
+    <button class="acc-trigger" onclick="tog(this)">
+      <span class="acc-pill cpL">L</span>
+      <span class="acc-title">Recréer la frontière hiérarchique</span>
+      <span class="acc-count">13 formulations</span>
+      <span class="acc-chevron">▼</span>
+    </button>
+    <div class="acc-body">
+      <div class="sub-label first">Mécanique — pourquoi c'est difficile</div>
+      <div class="fcard" style="background:var(--cream);border-color:#ccc9c0;cursor:default;">
+        <p style="font-size:12.5px;color:var(--muted);font-style:italic;">L'horizontalité ambiguë n'est pas un manque de respect — c'est un héritage que tu as toi-même construit pendant 6 ans. Les gens reproduisent le modèle relationnel que tu as installé. Changer ça ne passe pas par le froid ou la distance, mais par un signal clair : chaleureux + asymétrique. Je t'entends ET c'est moi qui décide.</p>
+      </div>
+      <div class="sub-label">Sortir du registre collègue sans rupture</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">1</span><p>Tu me connais — et c'est pour ça que tu sais que je vais être direct avec toi.</p><span class="ftag">Retourner l'ancienneté · Ouvrir un recadrage</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">2</span><p>Je t'entends. Et justement parce qu'on se connaît, je peux te dire franchement que ce n'est plus comme ça que ça va fonctionner.</p><span class="ftag">Chaleureux + asymétrique</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">3</span><p>Je ne change pas en tant que personne. Ce qui change, c'est le rôle dans lequel on se parle maintenant.</p><span class="ftag">Distinguer la personne du rôle</span></div>
+      <div class="sub-label">Ne pas se laisser aspirer dans les frustrations</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">4</span><p>Ce que tu décris, c'est sérieux. Formalise-le et on le traite dans le bon cadre — pas ici, pas comme ça.</p><span class="ftag">Écouter sans absorber · Recadrer le canal</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">5</span><p>Je ne suis pas la bonne oreille pour ça en ce moment. Mets-le par écrit et on en parle en entretien.</p><span class="ftag">Refuser l'informel · Poser le cadre</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">6</span><p>Je t'arrête — tu es en train de me mettre dans une position où je devrais choisir un camp. Je ne le fais pas.</p><span class="ftag">Jeux politiques · Refuser l'instrumentalisation</span></div>
+      <div class="sub-label">Gérer la familiarité excessive</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">7</span><p>On a travaillé ensemble longtemps — ça ne change pas. Ce qui change, c'est le registre dans lequel on traite les sujets professionnels.</p><span class="ftag">Ancienneté ≠ Passe-droit</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">8</span><p>Ce que tu me demandes là, ce n'est pas quelque chose que je peux faire en dehors du cadre normal. Fais-le remonter par le bon canal.</p><span class="ftag">Refuser le traitement de faveur</span></div>
+      <div class="sub-label">Installer l'asymétrie en réunion</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">9</span><p>Je vous laisse finir, et ensuite je vous dis ce que j'en retiens et comment on avance.</p><span class="ftag">Écouter en dernier · Conclure</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">10</span><p>Je note les positions. C'est moi qui tranche. Je reviens vers vous d'ici [délai].</p><span class="ftag">Enregistrer sans débattre · Trancher seul</span></div>
+      <div class="sub-label">Répondre à un test de frontière en public</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">11</span><p>Ce n'est pas ce qu'on a décidé. On en parle en dehors de cette salle.</p><span class="ftag">Stopper · Pas d'explication publique</span></div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">12</span><p>Je t'entends — et je ne vais pas répondre à ça en réunion. On se voit demain.</p><span class="ftag">Différer · Pas de joute en public</span></div>
+      <div class="sub-label">Reprendre le contrôle de ton espace de décision</div>
+      <div class="fcard" onclick="copyCard(this)"><span class="num">13</span><p>Je prends le sujet. Je ne prends pas position maintenant — je reviens vers toi avec une réponse construite, pas une réaction.</p><span class="ftag">Espace de décision · Pas réactif</span></div>
+    </div>
+  </div>
+
   <p class="memo-hint">Tap un titre pour déplier · Tap une carte pour la copier</p>
 </div>
 
 <!-- =================== DRILL =================== -->
+
 <div id="tab-drill" class="drill-section">
   <div class="filter-row">
     <button class="filter-btn on" onclick="setFilter('ALL',this)">Tout</button>
@@ -366,6 +518,10 @@
     <button class="filter-btn" onclick="setFilter('F',this)">F · Relation</button>
     <button class="filter-btn" onclick="setFilter('G',this)">G · 1er RDV</button>
     <button class="filter-btn" onclick="setFilter('H',this)">H · 2ème RDV</button>
+    <button class="filter-btn" onclick="setFilter('I',this)">I · Opérationnel</button>
+    <button class="filter-btn" onclick="setFilter('J',this)">J · Périmètre</button>
+    <button class="filter-btn" onclick="setFilter('K',this)">K · Cadre</button>
+    <button class="filter-btn" onclick="setFilter('L',this)">L · Frontière</button>
   </div>
   <div class="prog-wrap"><div class="prog-fill" id="prog" style="width:0%"></div></div>
   <div class="nav-info">
@@ -401,6 +557,7 @@
 </div>
 
 <!-- =================== RESULTS =================== -->
+
 <div id="tab-results" class="results-section">
   <div class="r-summary">
     <h3 id="r-avg">— / 5</h3>
@@ -437,8 +594,20 @@ Connaître ≠ piloter, parler sujets pas personnes avec le PDG, écouter sans p
 G — CONDUIRE LE 1ER ENTRETIEN N-1 (J2-J5, 90 min)
 Objectif : comprendre la réalité réelle (pas la version officielle). Créer la confiance ("ce n'est pas un entretien d'évaluation, ce qu'on se dit reste entre nous"). Poser les bonnes questions sur les risques à 60 jours, les signaux faibles, ce qui se dit dans les couloirs. Relancer quand c'est trop lisse ("et si je demandais à ton équipe ?", "j'ai l'impression que tu te limites"). Ne pas résoudre en séance. Ne pas réagir aux sujets politiques ("je note, j'ai besoin de me faire ma propre opinion"). Adapter l'ouverture au profil : Études&Dev = delivery exposé, Exploitation = bout de chaîne qui absorbe, Infra = lecture longue, Architecture = périmètre à définir, Pilotage = vision transverse. Face à un test de maîtrise technique : "c'est ton domaine, je veux d'abord comprendre ta lecture".
 
+I — SORTIR DE L'OPÉRATIONNEL EN RÉUNION
+Objectif : maintenir la posture DSI quand une réunion vire au comité technique. Remonter la discussion vers l'arbitrage ("quel est l'impact sur la décision ?"), déléguer le technique hors séance ("qui prend la main pour cadrer ça en dehors de cette salle ?"), demander une recommandation plutôt qu'un exposé du problème ("donnez-moi vos conclusions et votre recommandation"). Ne jamais valider un choix technique en séance. Garder la posture sans paraître distant ("je vous fais confiance sur le technique, ce que j'attends c'est une reco claire"). Face à une demande de validation technique : rediriger vers les critères de décision et les risques, pas vers le fond technique.
+
+J — DÉFENDRE LE PÉRIMÈTRE DSI FACE AU COMEX
+La bonne posture n'est pas le recadrage frontal mais reconnaître l'expertise + verrouiller la gouvernance. Formuler : "ton expertise est utile, mais la décision est DSI." Distinguer contribution et pilotage ("tu peux contribuer, pas co-piloter"). Sur le cas SIRH/front-end/Transfo Digitale : une contrainte de sourcing ne crée pas un transfert de périmètre. La frontière Digital/SI se cadre dans un espace dédié avec le PDG, pas au cas par cas en séance. Sous pression COMEX : ne pas trancher en séance, proposer un cadrage PDG ou revenir sous 48h. Après un recadrage trop sec : tenir le fond, corriger le ton ("j'ai été trop direct, le fond reste le même, comment tu contribues utilement ?"). Un directeur COMEX recadré frontalement devient un opposant — la combinaison reconnaissance + verrouillage évite ça.
+
 H — CONDUIRE LE 2ÈME ENTRETIEN N-1 (J18-J25, 45 min, sur base des livrables)
 Objectif : restituer sa lecture, clarifier les points ambigus, envoyer les signaux de délégation. Montrer qu'on a lu ("j'ai noté [point précis]"). Creuser les absences ("tu n'as pas parlé de [sujet], c'est volontaire ?"). Forcer le choix sur les priorités. Formuler la délégation clairement et différemment selon le profil : Études&Dev = pilier delivery autonome avec alerte tôt, Exploitation = porte ses engagements mais remonte l'amont avant explosion, Infra = confirmation du fonctionnement existant (ne pas "accorder" ce qui est déjà acquis), Architecture = 2-3 chantiers fondateurs et interfaces critiques, Pilotage = synthèse portefeuille + rôle CODIR. Clore sur la réunion collective N-1 dans 10 jours. Face à "tu gardes ce sujet parce que tu n'as pas confiance ?" : "non — parce que c'est un sujet à enjeu, c'est différent."
+
+K — DEVENIR DÉTENTEUR DU CADRE ET DES ARBITRAGES
+Transition de posture : passer de transverse/collaboratif à détenteur du cadre. Mécanique clé : le cadre se pose par la clarté, pas par la force. Poser le circuit en amont ("je veux être dans la boucle avant que ça parte"). Reprendre la main après une décision prise sans soi ("à l'avenir ce type de décision passe par moi — ce n'est pas un reproche, c'est une règle"). Distinguer l'acte du circuit ("je ne remets pas en cause ton initiative, je remets en cause le circuit"). Recadrer en séance sans écraser ("je t'arrête — on reprend ça en bilatéral"). Rendre le circuit visible comme une protection pour eux ("si tu portes ça sans que je l'aie vu, tu t'exposes"). Clore sans laisser de porte ouverte ("c'est arbitré, on avance comme ça"). Critiquer les décisions court-circuitées en réordonnant sans punir.
+
+L — RECRÉER LA FRONTIÈRE HIÉRARCHIQUE
+Mécanique : l'horizontalité ambiguë est un héritage construit pendant 6 ans — les gens reproduisent le modèle installé. La transition = chaleureux + asymétrique (jamais froid ni distant). Distinguer la personne du rôle ("je ne change pas en tant que personne, c'est le rôle qui change"). Ne pas absorber les frustrations informelles ("formalise-le, on le traite dans le bon cadre"). Refuser l'instrumentalisation dans les jeux politiques ("tu me mets dans une position où je devrais choisir un camp — je ne le fais pas"). Ancienneté ≠ passe-droit ("ça ne change pas, ce qui change c'est le registre"). Installer l'asymétrie en réunion : écouter en dernier, conclure, trancher seul. Face à un test de frontière public : stopper sans explication, différer en bilatéral. Reprendre l'espace de décision : répondre construit, pas réactif.
 
 CRITÈRES D'ÉVALUATION :
 - Couverture des éléments clés de la catégorie et du profil concerné
@@ -515,17 +684,58 @@ const SC = [
   { cat:'H', who:'N-1 Exploitation · 2ème entretien', text:"Et c'est quoi tes règles de fonctionnement avec nous ? Comment tu veux qu'on travaille ensemble ?", profil:'Exploitation' },
   { cat:'H', who:'N-1 Études & Dev · clôture', text:"OK donc tu me délègues le delivery. Mais si quelque chose dérape, tu me couvres vis-à-vis du COMEX ?", profil:'Études & Dev' },
   { cat:'H', who:'N-1 Infrastructures · 2ème entretien', text:"Il y a un sujet sur les contrats fournisseurs que je n'ai pas mis dans mon livrable parce que c'est sensible politiquement — ça implique des gens au COMEX.", profil:'Infrastructures' },
+,
+
+  // — I — Sortir de l'opérationnel
+  { cat:'I', who:'Chef de projet IT · réunion de suivi', text:"On a un désaccord entre l'équipe Infra et l'équipe Dev sur le choix de la solution de containerisation — Docker Swarm vs Kubernetes. On a besoin d'un arbitrage." },
+  { cat:'I', who:'Directeur métier · réunion projet ERP', text:"Je veux qu'on passe en revue chaque module du paramétrage pour s'assurer qu'on a bien couvert tous les cas d'usage métier." },
+  { cat:'I', who:'Manager IT · réunion hebdo', text:"On a identifié 3 options d'architecture pour le batch de nuit — je voulais vous présenter les benchmarks qu'on a faits sur chacune." },
+  { cat:'I', who:'N-1 Études & Dev · réunion de crise', text:"Le problème c'est que notre pipeline CI/CD ne supporte pas les déploiements blue-green avec notre version actuelle de Jenkins. Il faudrait migrer vers GitLab CI mais ça prend 3 mois." },
+  { cat:'I', who:'Comité projet · réunion plénière', text:"[La réunion dure depuis 90 minutes sur des choix techniques de paramétrage. Personne ne parle d'impacts métier ni de décision.]" },
+  { cat:'I', who:'N-1 Infra · point hebdo', text:"Pour la migration cloud, on a fait une analyse comparative entre AWS, Azure et GCP sur 14 critères — je voulais vous la présenter en détail." },
+  { cat:'I', who:'Directeur métier · réunion de cadrage', text:"Est-ce que vous pensez que le choix de React vs Angular pour le front-end va impacter les délais ? Parce qu'on a un avis là-dessus côté métier." },
+
+  // — J — Défendre le périmètre
+  { cat:'J', who:'Dir. Transfo Digitale · réunion bilatérale', text:"Le projet SIRH, et notamment le SelfRH, c'est clairement du front-end — les éditeurs qu'on a consultés ne savent pas produire ça. Mon équipe a les compétences, je pense qu'on devrait co-piloter ce chantier." },
+  { cat:'J', who:'Dir. Transfo Digitale · COMEX', text:"Je voulais signaler devant tout le monde que sur le projet SIRH, on n'a pas été associés alors qu'on a une compétence clé. Je pense que la gouvernance devrait être revue." },
+  { cat:'J', who:'Dir. Transfo Digitale · couloir après COMEX', text:"Je comprends que tu veuilles garder la main sur le SIRH. Mais soyons honnêtes — si le front-end foire, c'est mon image aussi qui en prend un coup." },
+  { cat:'J', who:'PDG · point hebdo', text:"[Dir. Transfo Digitale] m'a parlé du SIRH. Il pense que son équipe devrait être impliquée plus fortement. Qu'est-ce que tu en penses ?" },
+  { cat:'J', who:'Dir. Transfo Digitale · J+7 après recadrage sec', text:"[Tu veux reprendre la conversation après avoir recadré trop frontalement la semaine dernière. Il est en retrait depuis.]" },
+  { cat:'J', who:'Dir. Achats · réunion projet', text:"On a un contrat éditeur qui arrive à échéance dans 60 jours. Je pense qu'on devrait renégocier ensemble — j'ai de l'expérience sur les négociations de ce type." }
+,
+
+  // — K — Détenteur du cadre
+  { cat:'K', who:'N-1 Études & Dev · te présente une décision déjà prise', text:"On a validé avec le client métier qu'on allait partir sur une refonte complète du module de congés — on leur a confirmé le périmètre et les délais ce matin." },
+  { cat:'K', who:'Chef de projet · en réunion de suivi', text:"[L'équipe vient de s'accorder sur une décision d'architecture sans t'inclure dans la discussion. Ils t'informent en fin de réunion.]" },
+  { cat:'K', who:'N-1 Pilotage · réunion hebdo', text:"J'ai envoyé le reporting COMEX directement ce matin — j'avais les éléments, ça m'a semblé plus efficace que d'attendre votre validation." },
+  { cat:'K', who:'Directeur métier · réunion projet', text:"On a deux options sur la table, vos équipes ne s'accordent pas — est-ce que vous pouvez trancher maintenant pour qu'on puisse avancer ?" },
+  { cat:'K', who:'N-1 Infra · point bilatéral', text:"Le contrat avec [éditeur X] arrive à échéance dans 45 jours. J'ai déjà contacté trois alternatives et j'ai une recommandation — je pense qu'on peut aller au renouvellement directement." },
+  { cat:'K', who:'Manager IT · couloir', text:"J'avais besoin d'une réponse rapide, du coup j'en ai parlé directement au DAF hier — il est aligné sur notre approche." },
+  { cat:'K', who:'COMEX · réunion plénière', text:"[Un directeur métier est en train de proposer une évolution du périmètre SI devant tout le COMEX sans t'avoir consulté au préalable.]" },
+
+  // — L — Frontière hiérarchique
+  { cat:'L', who:'Ancien collègue DSI · couloir J3', text:"Écoute, entre nous — tu sais que [N-1 X] n'est pas vraiment à la hauteur. Je voulais juste te dire ça avant que tu t'en rendes compte tout seul." },
+  { cat:'L', who:'Collaborateur de longue date · message direct', text:"Je t'envoie ça en direct parce qu'on se connaît : la réunion de ce matin était une catastrophe, [manager Y] a complètement perdu le fil. Tu devrais intervenir." },
+  { cat:'L', who:'N-1 · fin de réunion', text:"[Il continue à te parler comme si vous étiez encore dans le même registre pair-à-pair, te demande ton avis personnel sur un collègue en aparté après la séance.]" },
+  { cat:'L', who:'Dir. COMEX · réunion formelle', text:"[En pleine réunion, il s'adresse à toi sur un ton familier qui crée une ambiguïté de statut devant le groupe — comme si vous décidiez ensemble plutôt que tu ne tranchais.]" },
+  { cat:'L', who:'Collaborateur DSI · réunion d\'équipe', text:"[Il te coupe la parole pour compléter ta phrase devant le groupe — sur le fond c'est juste, mais le geste installe une horizontalité visible.]" },
+  { cat:'L', who:'Ancien pair devenu N-1 · entretien individuel', text:"Tu sais, on s'est toujours dit les choses franchement — là j'ai l'impression que tu es en train de changer et que tu nous gardes moins dans la boucle qu'avant. C'est voulu ?" }
+
 ];
 
 const LABELS = {
   A:'Cat. A — Rôle', B:'Cat. B — Patience', C:'Cat. C — Recadrer',
   D:'Cat. D — Pression', E:'Cat. E — Arbitrage', F:'Cat. F — Relation',
-  G:'Cat. G — 1er entretien N-1', H:'Cat. H — 2ème entretien N-1'
+  G:'Cat. G — 1er entretien N-1', H:'Cat. H — 2ème entretien N-1',
+  I:'Cat. I — Sortir de l\'opérationnel', J:'Cat. J — Défendre le périmètre',
+  K:'Cat. K — Détenteur du cadre', L:'Cat. L — Frontière hiérarchique'
 };
 const BADGE_TXT = {
   A:'→ Expliquer ton rôle', B:'→ Faire patienter', C:'→ Recadrer sans blesser',
   D:'→ Tenir la posture', E:'→ Annoncer un arbitrage', F:'→ Gérer la relation',
-  G:'→ Conduire le 1er entretien', H:'→ Conduire le 2ème entretien'
+  G:'→ Conduire le 1er entretien', H:'→ Conduire le 2ème entretien',
+  I:'→ Remonter le niveau', J:'→ Défendre le périmètre DSI',
+  K:'→ Poser le cadre et arbitrer', L:'→ Recréer la frontière hiérarchique'
 };
 
 let activeFilter = 'ALL', shuffled = [], cur = 0, results = [];
@@ -664,5 +874,6 @@ function tog(btn) {
 
 initDrill();
 </script>
+
 </body>
 </html>
